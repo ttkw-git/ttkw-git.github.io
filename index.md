@@ -2,7 +2,7 @@
 
 ---
 
-### Category Name 1 
+### Supervised Learning 
 
 [Predicting the weather in Winnipeg](https://github.com/ttkw-git/Winnipeg_Weather_Preidict)
 <img src="images/Winnipeg_Fork.jpg?raw=true"/>
@@ -17,17 +17,12 @@
 
 ---
 
-### Category Name 2
+### Unspervised Learning
 
 - [Project 1 Title](http://example.com/)
 - [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
 - [Project 4 Title](http://example.com/)
 - [Project 5 Title](http://example.com/)
-
----
-
-
-
 
 ---
