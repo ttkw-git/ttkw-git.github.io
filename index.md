@@ -4,7 +4,7 @@
 
 ### Category Name 1 
 
-[Predicting the weather in Winnipeg](/sample_page)
+[Predicting the weather in Winnipeg](https://github.com/ttkw-git/Winnipeg_Weather_Preidict)
 <img src="images/Winnipeg_Fork.jpg?raw=true"/>
 
 ---
