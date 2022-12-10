@@ -8,8 +8,8 @@
 <img src="images/Winnipeg_Fork.jpg?raw=true"/>
 
 ---
-[Project 2 Title](https://github.com/ttkw-git/Mall_Customer_Segmentation)
-<img src="images/Mall_Customers.jpg?raw=true"/>
+[Project 2 Title](https://examle.com)
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 [Project 3 Title](http://example.com/)
@@ -19,7 +19,7 @@
 
 ### Unspervised Learning
 
-- [Project 1 Title](http://example.com/)
+- [Mall Customer Segmentation](http://example.com/](https://github.com/ttkw-git/Mall_Customer_Segmentation)
 - [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
 
