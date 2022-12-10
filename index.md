@@ -19,7 +19,7 @@
 
 ### Unspervised Learning
 
-- [Mall Customer Segmentation](http://example.com/](https://github.com/ttkw-git/Mall_Customer_Segmentation)
+- [Mall Customer Segmentation](https://github.com/ttkw-git/Mall_Customer_Segmentation)
 - [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
 
