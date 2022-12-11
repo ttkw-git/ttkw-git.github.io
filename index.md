@@ -27,6 +27,6 @@
 
 ### Deep Learning
 
-- [Project 1 Title](http://example.com/)
+- [Shoes Classification (Nike Adidas Converse)](https://github.com/ttkw-git/Shoes_Image_ClassificationNike_Adidas_Converse)
 - [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
