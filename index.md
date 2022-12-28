@@ -8,6 +8,7 @@
 <img src="images/Winnipeg_Fork.jpg?raw=true"/>
 
  - [Predicts bird species](https://github.com/ttkw-git/Predicts_bird_species)
+<img src="images/predict_bird_species.png?raw=true"/>
 
 ---
 
