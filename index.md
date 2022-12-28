@@ -8,12 +8,10 @@
 <img src="images/Winnipeg_Fork.jpg?raw=true"/>
 
 ---
-[Project 2 Title](https://examle.com)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Predicts bird species](https://github.com/ttkw-git/Predicts_bird_species)
 
 ---
 [Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 
