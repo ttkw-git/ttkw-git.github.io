@@ -10,6 +10,8 @@
  - [Predicts bird species](https://github.com/ttkw-git/Predicts_bird_species)
 <img src="images/predict_bird_species.png?raw=true"/>
 
+ - [Spam Detection 5 Youtube video](https://github.com/ttkw-git/Youtube_Spam_Detection_5_video)
+
 ---
 
 ### Unspervised Learning
