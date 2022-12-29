@@ -25,5 +25,5 @@
 ### Deep Learning
 
 - [Shoes Classification (Nike Adidas Converse)](https://github.com/ttkw-git/Shoes_Image_ClassificationNike_Adidas_Converse)
-- [Project 2 Title](http://example.com/)
+- [Sentiment Anaylzer with Word2Vec](http://example.com/](https://github.com/ttkw-git/Sentiment_anaylzer_w2v)
 - [Project 3 Title](http://example.com/)
