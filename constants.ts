@@ -109,7 +109,7 @@ export const PROJECTS: Project[] = [
     title: 'Agricultural Robotics Research (Current Work)',
     description: 'Ongoing research in autonomous systems development using ROS2 and Python at University of Winnipeg. Building practical skills in robotics programming and sensor integration for agricultural applications.',
     longDescription: 'Current research project in autonomous robotics systems using ROS2 and Python as part of agricultural technology development at University of Winnipeg. Working on foundational expertise in autonomous navigation, sensor integration, and data collection applicable to precision agriculture.',
-    imageUrl: 'images/projects/1.jpg',
+    imageUrl: 'images/projects/data_rover.jpg',
     projectUrl: 'https://github.com/ttkw-git', // Link to main GitHub since this is current work
     demoUrl: '',
     category: 'Robotics Research',
