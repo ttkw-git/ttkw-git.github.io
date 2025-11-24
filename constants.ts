@@ -25,120 +25,119 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'Agricultural Robotics Research & Development',
-    description: 'Currently developing autonomous systems using ROS2 and Python at University of Winnipeg, building practical skills in robotics programming and sensor integration for agricultural applications.',
-    longDescription: 'Active research in autonomous robotics systems using ROS2 and Python as part of agricultural technology development. Currently working on mini rover systems to build foundational expertise in autonomous navigation, sensor integration, and data collection that will be applicable to precision agriculture and field robotics.',
-    imageUrl: 'images/projects/data_rover.jpg',
+    title: 'Shoe Brand Classification with Computer Vision',
+    description: 'Machine learning model using CNN to classify shoe images into brand categories (Adidas, Nike, Converse). Demonstrates practical computer vision applications in e-commerce and product recognition.',
+    longDescription: 'Built a convolutional neural network to automatically classify shoe brands from product images. Applied deep learning techniques including image preprocessing, CNN architecture design, and model evaluation to create a practical computer vision solution for automated product categorization.',
+    imageUrl: 'images/projects/1.jpg',
     projectUrl: 'https://gist.github.com/ttkw-git/81b6d19b8424e9129592db48f459e3c1',
     demoUrl: '',
-    category: 'Agricultural Robotics',
+    category: 'Computer Vision',
     featured: true,
-    tags: ['ROS2', 'Python', 'Agricultural Research', 'Autonomous Systems'],
+    tags: ['Computer Vision', 'CNN', 'Python', 'TensorFlow'],
     technologies: [
-      'ROS2', 'Python', 'Robotics Programming', 'Sensor Integration', 'Autonomous Navigation', 'Agricultural Technology'
+      'Python', 'TensorFlow/Keras', 'Computer Vision', 'CNN', 'Image Processing', 'Jupyter Notebooks'
     ],
     achievements: [
-      'Developing expertise in ROS2 framework for autonomous systems programming',
-      'Building hands-on experience with sensor integration for agricultural applications',
-      'Learning autonomous navigation and control system development',
-      'Gaining practical knowledge applicable to precision agriculture technology'
+      'Implemented CNN architecture for multi-class image classification',
+      'Achieved high accuracy in automated brand recognition',
+      'Built end-to-end ML pipeline from data preprocessing to model evaluation',
+      'Demonstrated practical computer vision application for e-commerce'
     ],
-    businessImpact: 'Research and development in agricultural robotics with potential applications to precision farming and automated data collection',
+    businessImpact: 'Automated product classification system with applications in e-commerce, inventory management, and retail automation',
     learningOutcomes: [
-      'Advanced robotics programming with ROS2 in agricultural contexts',
-      'Practical sensor integration and data collection system development',
-      'Understanding of agricultural technology requirements and applications'
+      'Hands-on experience with convolutional neural networks',
+      'Image preprocessing and computer vision techniques',
+      'End-to-end machine learning project development'
     ]
   },
   {
     id: 2,
-    title: 'IoT Environmental Monitoring System',
-    description: 'Designed and implemented IoT infrastructure using Raspberry Pi for real-time environmental monitoring, demonstrating practical applications of edge computing and sensor networks.',
-    longDescription: 'Built comprehensive IoT ecosystem for environmental data collection using Raspberry Pi and sensor networks. Developed automated data logging systems and real-time monitoring capabilities that demonstrate the potential for precision agriculture and greenhouse automation applications.',
+    title: 'Customer Segmentation Analysis',
+    description: 'Unsupervised learning project analyzing customer data to identify distinct market segments using clustering algorithms. Provides actionable insights for targeted marketing strategies.',
+    longDescription: 'Applied K-means clustering and statistical analysis to customer behavior data to discover meaningful market segments. Used data visualization and exploratory data analysis to extract business insights and develop recommendations for targeted marketing campaigns.',
     imageUrl: 'images/projects/2.jpg',
     projectUrl: 'https://gist.github.com/ttkw-git/0306d2680dacb9050acebbd1d22e690c',
     demoUrl: '',
-    category: 'IoT & Edge Computing',
+    category: 'Data Analytics',
     featured: true,
-    tags: ['IoT', 'Raspberry Pi', 'Environmental Monitoring', 'Python'],
+    tags: ['Data Analysis', 'K-Means', 'Customer Analytics', 'Python'],
     technologies: [
-      'Raspberry Pi', 'IoT Sensors', 'Python', 'Environmental Data Processing', 'Real-time Systems', 'Data Logging'
+      'Python', 'Pandas', 'Scikit-learn', 'K-Means Clustering', 'Matplotlib', 'Data Visualization'
     ],
     achievements: [
-      'Successfully deployed 24/7 automated environmental monitoring system',
-      'Achieved reliable data collection and processing using edge computing principles',
-      'Built scalable IoT architecture suitable for agricultural applications',
-      'Developed real-time data visualization and monitoring capabilities'
+      'Successfully identified distinct customer behavioral patterns using clustering',
+      'Applied statistical analysis to extract actionable business insights',
+      'Created comprehensive data visualizations for stakeholder communication',
+      'Developed targeted marketing recommendations based on segment analysis'
     ],
-    businessImpact: 'IoT infrastructure demonstrating practical applications for environmental monitoring and precision agriculture',
+    businessImpact: 'Customer segmentation insights enabling data-driven marketing strategies and improved customer relationship management',
     learningOutcomes: [
-      'IoT system architecture and edge computing implementation',
-      'Environmental data processing and analysis techniques',
-      'Real-time monitoring system design and deployment'
+      'Unsupervised learning and clustering algorithm implementation',
+      'Customer behavior analysis and market segmentation',
+      'Business intelligence and data-driven recommendation development'
     ]
   },
   {
     id: 3,
-    title: 'Multi-Agent Reinforcement Learning Research',
-    description: 'Implementing advanced multi-agent AI systems using Deep Q-Networks as part of Georgia Tech MS coursework, developing expertise in cutting-edge machine learning approaches.',
-    longDescription: 'Conducting academic research in multi-agent reinforcement learning using PyTorch and advanced DQN algorithms. Work focuses on cooperative AI behaviors and coordination strategies as part of Georgia Tech MS Computer Science program, with potential applications to autonomous system coordination.',
+    title: 'YouTube Spam Detection with NLP',
+    description: 'Natural language processing system to detect spam comments across YouTube videos using machine learning text classification. Trained on diverse comment datasets for content moderation.',
+    longDescription: 'Developed a comprehensive NLP pipeline for automated spam detection in social media comments. Applied text preprocessing, feature extraction, and machine learning classification to build a content moderation system with practical applications for online platforms.',
     imageUrl: 'images/projects/3.jpg',
     projectUrl: 'https://gist.github.com/ttkw-git/4923c2bfa486086834f6663ed5ad97eb',
     demoUrl: '',
-    category: 'AI Research',
+    category: 'Natural Language Processing',
     featured: true,
-    tags: ['Reinforcement Learning', 'PyTorch', 'Academic Research', 'Multi-Agent AI'],
+    tags: ['NLP', 'Text Classification', 'Spam Detection', 'Python'],
     technologies: [
-      'PyTorch', 'Deep Q-Networks', 'Multi-Agent Systems', 'Python', 'Academic Research Methods'
+      'Python', 'NLTK', 'Scikit-learn', 'Text Processing', 'Feature Engineering', 'Machine Learning'
     ],
     achievements: [
-      'Implementing advanced DQN algorithms for multi-agent coordination',
-      'Developing expertise in reinforcement learning through rigorous academic study',
-      'Building practical experience with PyTorch and deep learning frameworks',
-      'Applying theoretical concepts to practical AI coordination challenges'
+      'Implemented text classification pipeline for automated spam detection',
+      'Applied advanced NLP techniques including text preprocessing and feature extraction',
+      'Trained models on diverse YouTube comment datasets for robust performance',
+      'Developed practical solution for social media content moderation'
     ],
-    businessImpact: 'Advanced AI research contributing to understanding of autonomous system coordination and decision-making',
+    businessImpact: 'Automated content moderation system with applications to social media platforms and online community management',
     learningOutcomes: [
-      'Advanced reinforcement learning theory and implementation',
-      'Multi-agent coordination strategies and algorithm design',
-      'Academic research methodology and performance evaluation',
-      'Practical experience with modern deep learning frameworks'
+      'Natural language processing and text classification techniques',
+      'Feature engineering for text data and model optimization',
+      'Practical application of NLP to real-world content moderation'
     ]
   },
   {
     id: 4,
-    title: 'Data Analysis & Business Intelligence Development',
-    description: 'Developing expertise in data processing, automation, and business intelligence through academic projects and practical applications, focusing on operational efficiency improvements.',
-    longDescription: 'Building proficiency in data engineering, automated processing systems, and business intelligence through coursework and practical projects. Gaining experience with SQL optimization, data pipeline development, and dashboard creation for operational insights.',
+    title: 'Agricultural Robotics Research (Current Work)',
+    description: 'Ongoing research in autonomous systems development using ROS2 and Python at University of Winnipeg. Building practical skills in robotics programming and sensor integration for agricultural applications.',
+    longDescription: 'Current research project in autonomous robotics systems using ROS2 and Python as part of agricultural technology development at University of Winnipeg. Working on foundational expertise in autonomous navigation, sensor integration, and data collection applicable to precision agriculture.',
     imageUrl: 'images/projects/1.jpg',
-    projectUrl: 'https://gist.github.com/ttkw-git/0306d2680dacb9050acebbd1d22e690c',
+    projectUrl: 'https://github.com/ttkw-git', // Link to main GitHub since this is current work
     demoUrl: '',
-    category: 'Data Engineering',
+    category: 'Robotics Research',
     featured: false,
-    tags: ['Data Analysis', 'Business Intelligence', 'SQL', 'Python'],
+    tags: ['ROS2', 'Python', 'Agricultural Research', 'Autonomous Systems'],
     technologies: [
-      'Python', 'SQL', 'Data Processing', 'Business Intelligence', 'Automation', 'Dashboard Development'
+      'ROS2', 'Python', 'Robotics Programming', 'Sensor Integration', 'Autonomous Navigation', 'Research Methods'
     ],
     achievements: [
-      'Developing proficiency in data processing and automation techniques',
-      'Building experience with business intelligence and dashboard creation',
-      'Learning SQL optimization and data pipeline development',
-      'Applying data analysis skills to real-world operational challenges'
+      'Developing expertise in ROS2 framework for autonomous systems',
+      'Building hands-on experience with sensor integration for agricultural applications',
+      'Learning autonomous navigation and control system development',
+      'Contributing to agricultural technology research at University of Winnipeg'
     ],
-    businessImpact: 'Skill development in data engineering and business intelligence with applications to operational efficiency',
+    businessImpact: 'Research and development in agricultural robotics with future applications to precision farming and automated data collection',
     learningOutcomes: [
-      'Data engineering best practices and pipeline development',
-      'Business intelligence system design and implementation',
-      'SQL optimization and database performance improvement techniques'
+      'Advanced robotics programming with ROS2',
+      'Sensor integration and data collection system development',
+      'Understanding of agricultural technology requirements and research methodologies'
     ]
   }
 ];
 
-export const ABOUT_TEXT_1 = "Technical Professional and AI Specialist currently pursuing MS Computer Science at Georgia Institute of Technology. My analytical approach combines technical expertise with business understanding, focusing on solutions that deliver measurable operational improvements and support strategic decision-making. Currently working as AI Trainer for Outlier while conducting research at University of Winnipeg.";
+export const ABOUT_TEXT_1 = "Technical Professional and AI Specialist currently pursuing MS Computer Science at Georgia Institute of Technology. My experience spans machine learning applications from computer vision and NLP to data analytics and business intelligence. Currently working as AI Trainer for Outlier while conducting agricultural robotics research at University of Winnipeg.";
 
-export const ABOUT_TEXT_2 = "My recent focus centers on practical AI applications that drive business value, from agricultural automation to data systems optimization. I bring international perspective with strong analytical foundation, now specializing in autonomous systems, computer vision, and business intelligence solutions for real-world challenges.";
+export const ABOUT_TEXT_2 = "My analytical approach combines technical expertise with practical application, focusing on solutions that deliver measurable improvements. I bring international perspective with strong analytical foundation, now specializing in AI development, data science, and emerging technologies for real-world challenges.";
 
-export const VALUE_PROPOSITION = "I develop practical AI and automation solutions that drive business value, from agricultural robotics to data systems, with a focus on delivering measurable improvements in operational efficiency and ROI.";
+export const VALUE_PROPOSITION = "I develop practical AI and machine learning solutions that drive business value, from computer vision and NLP to data analytics, with a focus on delivering measurable improvements in operational efficiency.";
 
 // Additional exports that components might need
 export const CURRENT_STATUS = {
@@ -149,12 +148,12 @@ export const CURRENT_STATUS = {
 };
 
 export const CORE_COMPETENCIES = [
-  "AI & Machine Learning Applications",
-  "Data Engineering & Business Intelligence", 
-  "Process Optimization & Automation",
+  "Machine Learning & Computer Vision",
+  "Natural Language Processing & Text Analytics", 
+  "Data Science & Customer Analytics",
   "Agricultural Technology & IoT Systems",
-  "Executive Reporting & KPI Development",
-  "Cross-functional Collaboration & Strategic Thinking"
+  "Business Intelligence & Process Optimization",
+  "Cross-functional Collaboration & Research"
 ];
 
-export const PROFESSIONAL_SUMMARY = "Experienced technical professional with strong foundation in data systems and proven research capabilities. Currently pursuing advanced studies at Georgia Institute of Technology while developing practical AI and automation expertise that drives business value. Seeking to apply technical skills and business acumen to solve complex challenges in industry.";
+export const PROFESSIONAL_SUMMARY = "Experienced technical professional with strong foundation in machine learning, data science, and practical AI applications. Currently pursuing advanced studies at Georgia Institute of Technology while developing expertise in computer vision, NLP, and autonomous systems. Seeking to apply technical skills and analytical thinking to solve complex industry challenges.";
