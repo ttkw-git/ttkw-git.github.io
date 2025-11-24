@@ -1,10 +1,9 @@
-import { Github, Linkedin, ExternalLink, Database, Brain, Shield, TrendingUp, Users, Zap } from 'lucide-react';
-import { Project, SocialLink, NavItem, Skill, Achievement } from './types';
+import { Github, Linkedin } from 'lucide-react';
+import { Project, SocialLink, NavItem } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -22,47 +21,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ];
 
-export const SKILLS: Skill[] = [
-  { 
-    category: 'Programming Languages',
-    items: [
-      { name: 'Python', level: 90, years: '3+' },
-      { name: 'JavaScript/TypeScript', level: 75, years: '2+' },
-      { name: 'SQL', level: 85, years: '3+' },
-      { name: 'R', level: 70, years: '2+' },
-    ]
-  },
-  {
-    category: 'Machine Learning & Data Science',
-    items: [
-      { name: 'Scikit-learn', level: 88, years: '3+' },
-      { name: 'TensorFlow/Keras', level: 82, years: '2+' },
-      { name: 'Pandas/NumPy', level: 90, years: '3+' },
-      { name: 'Computer Vision (OpenCV)', level: 80, years: '2+' },
-      { name: 'Natural Language Processing', level: 85, years: '2+' },
-      { name: 'Data Visualization (Matplotlib/Seaborn)', level: 88, years: '3+' },
-    ]
-  },
-  {
-    category: 'Web Development',
-    items: [
-      { name: 'React', level: 75, years: '1+' },
-      { name: 'HTML/CSS', level: 85, years: '2+' },
-      { name: 'Node.js', level: 70, years: '1+' },
-      { name: 'Git/GitHub', level: 88, years: '3+' },
-    ]
-  },
-  {
-    category: 'Tools & Platforms',
-    items: [
-      { name: 'Jupyter Notebooks', level: 95, years: '3+' },
-      { name: 'Docker', level: 65, years: '1+' },
-      { name: 'AWS/Cloud Services', level: 60, years: '1+' },
-      { name: 'PostgreSQL/MySQL', level: 78, years: '2+' },
-    ]
-  }
-];
-
 export const PROJECTS: Project[] = [
   {
     id: 1,
@@ -71,9 +29,10 @@ export const PROJECTS: Project[] = [
     longDescription: 'Built an end-to-end machine learning pipeline for e-commerce applications. The system processes product images, extracts visual features, and predicts brand classification to help automate inventory management and improve search functionality.',
     imageUrl: 'images/projects/1.jpg',
     projectUrl: 'https://gist.github.com/ttkw-git/81b6d19b8424e9129592db48f459e3c1',
-    demoUrl: '', // Add if you have a live demo
+    demoUrl: '',
     category: 'Machine Learning',
     featured: true,
+    tags: ['Machine Learning', 'Python', 'Computer Vision'],
     technologies: [
       'Python', 'TensorFlow', 'Computer Vision', 'CNN', 'Image Processing', 'Scikit-learn'
     ],
@@ -100,6 +59,7 @@ export const PROJECTS: Project[] = [
     demoUrl: '',
     category: 'Data Analytics',
     featured: true,
+    tags: ['Data Analysis', 'Clustering', 'K-Means'],
     technologies: [
       'Python', 'Pandas', 'Scikit-learn', 'K-Means', 'Data Visualization', 'Matplotlib', 'Seaborn'
     ],
@@ -126,6 +86,7 @@ export const PROJECTS: Project[] = [
     demoUrl: '',
     category: 'Natural Language Processing',
     featured: true,
+    tags: ['NLP', 'Spam Detection', 'Python'],
     technologies: [
       'Python', 'NLTK', 'Scikit-learn', 'TF-IDF', 'Naive Bayes', 'SVM', 'Text Processing'
     ],
@@ -141,33 +102,6 @@ export const PROJECTS: Project[] = [
       'Comparison of ML algorithms for text classification',
       'Handling imbalanced datasets in NLP'
     ]
-  }
-];
-
-export const ACHIEVEMENTS: Achievement[] = [
-  {
-    icon: TrendingUp,
-    value: '94%',
-    label: 'Average Model Accuracy',
-    description: 'Across all ML projects'
-  },
-  {
-    icon: Database,
-    value: '100K+',
-    label: 'Data Points Processed',
-    description: 'In various projects'
-  },
-  {
-    icon: Brain,
-    value: '15+',
-    label: 'ML Models Deployed',
-    description: 'From concept to production'
-  },
-  {
-    icon: Zap,
-    value: '85%',
-    label: 'Process Automation',
-    description: 'Average efficiency improvement'
   }
 ];
 
