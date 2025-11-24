@@ -1,27 +1,3 @@
-import { Github, Linkedin } from 'lucide-react';
-import { Project, SocialLink, NavItem } from './types';
-
-export const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
-];
-
-export const SOCIAL_LINKS: SocialLink[] = [
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/tony-tk-wong/',
-    icon: Linkedin,
-  },
-  {
-    name: 'GitHub',
-    url: 'https://github.com/ttkw-git',
-    icon: Github,
-  },
-];
-
 export const PROJECTS: Project[] = [
   {
     id: 1,
@@ -106,54 +82,42 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 4,
-    title: 'Agricultural Robotics Research (Current Work)',
-    description: 'Ongoing research in autonomous systems development using ROS2 and Python at University of Winnipeg. Building practical skills in robotics programming and sensor integration for agricultural applications.',
-    longDescription: 'Current research project in autonomous robotics systems using ROS2 and Python as part of agricultural technology development at University of Winnipeg. Working on foundational expertise in autonomous navigation, sensor integration, and data collection applicable to precision agriculture.',
-    imageUrl: 'images/projects/data_rover.jpg',
-    projectUrl: 'https://github.com/ttkw-git', // Link to main GitHub since this is current work
+    title: 'Autonomous Agricultural Rover Development',
+    description: 'Ongoing development of autonomous navigation system using ROS2 for agricultural applications. Building practical skills in robotics programming, sensor integration, and precision agriculture technology.',
+    longDescription: 'Active development of autonomous mini rover using ROS2 and Python for agricultural technology research at University of Winnipeg. Project focuses on autonomous navigation, sensor integration, and data collection systems applicable to precision agriculture and field robotics. Work includes Docker containerization, sensor fusion, and real-time control systems.',
+    imageUrl: 'images/projects/1.jpg',
+    projectUrl: 'https://github.com/ttkw-git/autonomous-mini-rover-ros2',
     demoUrl: '',
-    category: 'Robotics Research',
-    featured: false,
-    tags: ['ROS2', 'Python', 'Agricultural Research', 'Autonomous Systems'],
+    category: 'Agricultural Robotics',
+    featured: true,
+    tags: ['ROS2', 'Python', 'Agricultural Technology', 'Autonomous Systems'],
     technologies: [
-      'ROS2', 'Python', 'Robotics Programming', 'Sensor Integration', 'Autonomous Navigation', 'Research Methods'
+      'ROS2', 'Python', 'Docker', 'Robotics Programming', 'Sensor Integration', 'Autonomous Navigation'
     ],
     achievements: [
-      'Developing expertise in ROS2 framework for autonomous systems',
-      'Building hands-on experience with sensor integration for agricultural applications',
-      'Learning autonomous navigation and control system development',
+      'Developing autonomous navigation system using ROS2 framework',
+      'Building sensor integration capabilities for agricultural data collection',
+      'Implementing Docker containerization for consistent development environment',
       'Contributing to agricultural technology research at University of Winnipeg'
     ],
-    businessImpact: 'Research and development in agricultural robotics with future applications to precision farming and automated data collection',
+    businessImpact: 'Autonomous systems research with direct applications to precision agriculture and field robotics technology',
     learningOutcomes: [
-      'Advanced robotics programming with ROS2',
-      'Sensor integration and data collection system development',
-      'Understanding of agricultural technology requirements and research methodologies'
+      'Advanced robotics programming with ROS2 in agricultural contexts',
+      'Autonomous navigation and sensor fusion system development',
+      'Agricultural technology requirements and practical implementation challenges'
     ]
   }
 ];
 
-export const ABOUT_TEXT_1 = "Technical Professional and AI Specialist currently pursuing MS Computer Science at Georgia Institute of Technology. My experience spans machine learning applications from computer vision and NLP to data analytics and business intelligence. Currently working as AI Trainer for Outlier while conducting agricultural robotics research at University of Winnipeg.";
-
-export const ABOUT_TEXT_2 = "My analytical approach combines technical expertise with practical application, focusing on solutions that deliver measurable improvements. I bring international perspective with strong analytical foundation, now specializing in AI development, data science, and emerging technologies for real-world challenges.";
-
-export const VALUE_PROPOSITION = "I develop practical AI and machine learning solutions that drive business value, from computer vision and NLP to data analytics, with a focus on delivering measurable improvements in operational efficiency.";
-
-// Additional exports that components might need
-export const CURRENT_STATUS = {
-  education: "MS Computer Science at Georgia Institute of Technology (2025-2026)",
-  work: "AI Trainer at Outlier (Freelance) • Research Technician at University of Winnipeg",
-  location: "Winnipeg, Manitoba, Canada",
-  availability: "Open to Full-Time Opportunities"
-};
-
+// Update core competencies to match the 4 projects
 export const CORE_COMPETENCIES = [
-  "Machine Learning & Computer Vision",
-  "Natural Language Processing & Text Analytics", 
-  "Data Science & Customer Analytics",
-  "Agricultural Technology & IoT Systems",
-  "Business Intelligence & Process Optimization",
-  "Cross-functional Collaboration & Research"
+  "Computer Vision & Deep Learning",
+  "Data Analytics & Customer Intelligence", 
+  "Natural Language Processing",
+  "Agricultural Robotics & Autonomous Systems",
+  "Machine Learning Model Development",
+  "Research & Technical Problem-Solving"
 ];
 
-export const PROFESSIONAL_SUMMARY = "Experienced technical professional with strong foundation in machine learning, data science, and practical AI applications. Currently pursuing advanced studies at Georgia Institute of Technology while developing expertise in computer vision, NLP, and autonomous systems. Seeking to apply technical skills and analytical thinking to solve complex industry challenges.";
+// Update professional summary to reflect focused expertise areas
+export const PROFESSIONAL_SUMMARY = "Experienced technical professional with demonstrated expertise in machine learning, computer vision, and data analytics. Currently pursuing MS Computer Science at Georgia Institute of Technology while developing autonomous systems for agricultural applications. Proven track record in building practical AI solutions with verifiable implementations and measurable business impact.";
