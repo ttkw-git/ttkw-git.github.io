@@ -4,16 +4,17 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  longDescription: string;
+  longDescription?: string;
   imageUrl: string;
   projectUrl: string;
   demoUrl?: string;
-  category: string;
-  featured: boolean;
-  technologies: string[];
-  achievements: string[];
-  businessImpact: string;
-  learningOutcomes: string[];
+  category?: string;
+  featured?: boolean;
+  tags: string[];
+  technologies?: string[];
+  achievements?: string[];
+  businessImpact?: string;
+  learningOutcomes?: string[];
 }
 
 export interface SocialLink {
