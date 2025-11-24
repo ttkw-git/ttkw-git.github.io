@@ -1,122 +1,130 @@
 import React from 'react';
-import { Code, Database, Brain, Globe, Award, TrendingUp } from 'lucide-react';
+import { Code, Database, Brain, TrendingUp, Award, Building2, Globe, Cog } from 'lucide-react';
 
-// Define types locally since they're not in the main types file yet
-interface SkillItem {
-  name: string;
-  level: number;
-  years: string;
-}
-
-interface Skill {
-  category: string;
-  items: SkillItem[];
-}
-
-interface Achievement {
-  icon: any;
-  value: string;
-  label: string;
-  description: string;
-}
-
-// Local data since it's not in constants yet
-const SKILLS: Skill[] = [
+// Enhanced skill data with business intelligence category and no percentages
+const SKILLS = [
   { 
-    category: 'Programming Languages',
+    category: 'Programming & Development',
+    icon: Code,
     items: [
-      { name: 'Python', level: 90, years: '3+' },
-      { name: 'JavaScript/TypeScript', level: 75, years: '2+' },
-      { name: 'SQL', level: 85, years: '3+' },
-      { name: 'R', level: 70, years: '2+' },
+      { name: 'Python', years: '5+ years', level: 'Expert', description: 'ML, Automation, Data Analysis' },
+      { name: 'SQL', years: '8+ years', level: 'Expert', description: 'Data Engineering, Business Intelligence' },
+      { name: 'JavaScript/TypeScript', years: '2+ years', level: 'Advanced', description: 'React, API Integration' },
+      { name: 'R', years: '2+ years', level: 'Intermediate', description: 'Statistical Analysis, Research' },
     ]
   },
   {
-    category: 'Machine Learning & Data Science',
+    category: 'AI & Machine Learning',
+    icon: Brain,
     items: [
-      { name: 'Scikit-learn', level: 88, years: '3+' },
-      { name: 'TensorFlow/Keras', level: 82, years: '2+' },
-      { name: 'Pandas/NumPy', level: 90, years: '3+' },
-      { name: 'Computer Vision (OpenCV)', level: 80, years: '2+' },
-      { name: 'Natural Language Processing', level: 85, years: '2+' },
-      { name: 'Data Visualization (Matplotlib/Seaborn)', level: 88, years: '3+' },
+      { name: 'Scikit-learn', years: '4+ years', level: 'Expert', description: 'ML Models, Classification' },
+      { name: 'PyTorch', years: '2+ years', level: 'Advanced', description: 'Deep Learning, RL' },
+      { name: 'Computer Vision (OpenCV)', years: '2+ years', level: 'Advanced', description: 'Image Processing, Autonomous Systems' },
+      { name: 'Natural Language Processing', years: '2+ years', level: 'Advanced', description: 'Text Analysis, AI Applications' },
+      { name: 'Reinforcement Learning', years: '2+ years', level: 'Advanced', description: 'Multi-Agent Systems' },
     ]
   },
   {
-    category: 'Web Development',
+    category: 'Business Intelligence & Analytics',
+    icon: TrendingUp,
     items: [
-      { name: 'React', level: 75, years: '1+' },
-      { name: 'HTML/CSS', level: 85, years: '2+' },
-      { name: 'Node.js', level: 70, years: '1+' },
-      { name: 'Git/GitHub', level: 88, years: '3+' },
+      { name: 'Data-Driven Decision Making', years: '3+ years', level: 'Expert', description: 'Strategic Analysis, ROI Optimization' },
+      { name: 'Process Optimization & Automation', years: '3+ years', level: 'Expert', description: 'Efficiency Improvements, Cost Reduction' },
+      { name: 'KPI Development & Monitoring', years: '3+ years', level: 'Advanced', description: 'Performance Metrics, Business Intelligence' },
+      { name: 'Executive Reporting & Dashboards', years: '2+ years', level: 'Advanced', description: 'Tableau, Strategic Insights' },
+      { name: 'Business Metrics & ROI Analysis', years: '2+ years', level: 'Advanced', description: 'Financial Impact Assessment' },
     ]
   },
   {
-    category: 'Tools & Platforms',
+    category: 'Data Engineering & Systems',
+    icon: Database,
     items: [
-      { name: 'Jupyter Notebooks', level: 95, years: '3+' },
-      { name: 'Docker', level: 65, years: '1+' },
-      { name: 'AWS/Cloud Services', level: 60, years: '1+' },
-      { name: 'PostgreSQL/MySQL', level: 78, years: '2+' },
+      { name: 'Data Pipelines & ETL', years: '5+ years', level: 'Expert', description: 'Automated Processing, Quality Assurance' },
+      { name: 'Tableau', years: '3+ years', level: 'Advanced', description: 'Business Intelligence, Visualization' },
+      { name: 'Database Design & Optimization', years: '4+ years', level: 'Advanced', description: 'Performance Tuning, Scalability' },
+      { name: 'Statistical Analysis', years: '4+ years', level: 'Advanced', description: 'Research Methods, Data Science' },
+    ]
+  },
+  {
+    category: 'Robotics & IoT Systems',
+    icon: Cog,
+    items: [
+      { name: 'ROS2 (Robot Operating System)', years: '2+ years', level: 'Advanced', description: 'Autonomous Navigation' },
+      { name: 'IoT & Edge Computing', years: '3+ years', level: 'Advanced', description: 'Raspberry Pi, Sensor Networks' },
+      { name: 'Agricultural Technology', years: '3+ years', level: 'Advanced', description: 'Precision Agriculture, Field Deployment' },
+      { name: 'System Integration', years: '3+ years', level: 'Advanced', description: 'API Development, REST Services' },
     ]
   }
 ];
 
-const ACHIEVEMENTS: Achievement[] = [
+const ACHIEVEMENTS = [
   {
     icon: TrendingUp,
-    value: '94%',
-    label: 'Average Model Accuracy',
-    description: 'Across all ML projects'
+    value: '50%',
+    label: 'Operational Efficiency Improvement',
+    description: 'Through automation and data systems'
   },
   {
     icon: Database,
-    value: '100K+',
-    label: 'Data Points Processed',
-    description: 'In various projects'
+    value: '25%',
+    label: 'Error Reduction',
+    description: 'Via optimized data pipelines'
   },
   {
     icon: Brain,
-    value: '15+',
-    label: 'ML Models Deployed',
-    description: 'From concept to production'
+    value: '90%+',
+    label: 'Cost Reduction',
+    description: 'In manual monitoring processes'
   },
   {
     icon: Award,
-    value: '85%',
-    label: 'Process Automation',
-    description: 'Average efficiency improvement'
+    value: '18+',
+    label: 'Professional Certifications',
+    description: 'Validated technical expertise'
+  }
+];
+
+const CERTIFICATIONS = [
+  {
+    name: 'CompTIA A+',
+    issuer: 'CompTIA',
+    date: 'Nov 2025',
+    category: 'Systems & Hardware'
+  },
+  {
+    name: 'Microsoft Azure AI Fundamentals',
+    issuer: 'Microsoft',
+    date: 'May 2024',
+    category: 'Cloud AI'
+  },
+  {
+    name: 'Google Advanced Data Analytics',
+    issuer: 'Google/Coursera',
+    date: 'Oct 2023',
+    category: 'Business Intelligence'
+  },
+  {
+    name: 'Google Data Analytics',
+    issuer: 'Google/Coursera', 
+    date: 'Oct 2023',
+    category: 'Data Analysis'
+  },
+  {
+    name: 'Machine Learning with Python',
+    issuer: 'FreeCodeCamp',
+    date: 'Apr 2023',
+    category: 'Machine Learning'
   }
 ];
 
 const Skills: React.FC = () => {
-  const getSkillIcon = (category: string) => {
-    switch (category) {
-      case 'Programming Languages':
-        return Code;
-      case 'Machine Learning & Data Science':
-        return Brain;
-      case 'Web Development':
-        return Globe;
-      case 'Tools & Platforms':
-        return Database;
-      default:
-        return Code;
+  const getSkillLevelColor = (level: string) => {
+    switch (level) {
+      case 'Expert': return 'text-emerald-400 bg-emerald-900/20 border-emerald-700';
+      case 'Advanced': return 'text-blue-400 bg-blue-900/20 border-blue-700';
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-900/20 border-yellow-700';
+      default: return 'text-slate-400 bg-slate-900/20 border-slate-700';
     }
-  };
-
-  const getSkillColor = (level: number) => {
-    if (level >= 85) return 'from-green-400 to-emerald-500';
-    if (level >= 75) return 'from-blue-400 to-cyan-500';
-    if (level >= 65) return 'from-yellow-400 to-orange-500';
-    return 'from-slate-400 to-slate-500';
-  };
-
-  const getSkillLabel = (level: number) => {
-    if (level >= 85) return 'Expert';
-    if (level >= 75) return 'Advanced';
-    if (level >= 65) return 'Intermediate';
-    return 'Beginner';
   };
 
   return (
@@ -131,18 +139,19 @@ const Skills: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Technical Skills & Expertise
+            Technical Skills & Business Expertise
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
-          <p className="text-lg text-slate-400 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-4xl mx-auto">
             Comprehensive skill set spanning the entire data science pipeline, from data collection 
-            and preprocessing to model deployment and monitoring.
+            and preprocessing to model deployment and business intelligence, with proven ability to 
+            drive operational efficiency and strategic decision-making.
           </p>
         </div>
 
         {/* Achievement Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {ACHIEVEMENTS.map((achievement: Achievement, index: number) => {
+          {ACHIEVEMENTS.map((achievement, index: number) => {
             const Icon = achievement.icon;
             return (
               <div
@@ -161,9 +170,9 @@ const Skills: React.FC = () => {
         </div>
 
         {/* Skills Categories */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {SKILLS.map((skillCategory: Skill, categoryIndex: number) => {
-            const Icon = getSkillIcon(skillCategory.category);
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          {SKILLS.map((skillCategory, categoryIndex: number) => {
+            const Icon = skillCategory.icon;
             return (
               <div
                 key={categoryIndex}
@@ -177,45 +186,25 @@ const Skills: React.FC = () => {
                 </div>
 
                 <div className="space-y-6">
-                  {skillCategory.items.map((skill: SkillItem, skillIndex: number) => (
+                  {skillCategory.items.map((skill, skillIndex: number) => (
                     <div key={skillIndex} className="group">
                       {/* Skill Header */}
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center space-x-3">
                           <span className="text-white font-medium">{skill.name}</span>
                           <span className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded-md">
-                            {skill.years} years
+                            {skill.years}
                           </span>
                         </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-slate-400 text-sm">{getSkillLabel(skill.level)}</span>
-                          <span className="text-white text-sm font-medium">{skill.level}%</span>
-                        </div>
+                        <span className={`px-3 py-1 text-xs font-medium rounded-full border ${getSkillLevelColor(skill.level)}`}>
+                          {skill.level}
+                        </span>
                       </div>
 
-                      {/* Progress Bar */}
-                      <div className="relative">
-                        <div className="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
-                          <div
-                            className={`h-full bg-gradient-to-r ${getSkillColor(skill.level)} rounded-full transition-all duration-1000 ease-out group-hover:scale-x-105 origin-left`}
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                        
-                        {/* Skill level indicator */}
-                        <div
-                          className="absolute top-0 h-2 w-1 bg-white rounded-full opacity-75"
-                          style={{ left: `${skill.level}%` }}
-                        ></div>
-                      </div>
-
-                      {/* Proficiency Markers */}
-                      <div className="flex justify-between mt-1 text-xs text-slate-500">
-                        <span>Beginner</span>
-                        <span>Intermediate</span>
-                        <span>Advanced</span>
-                        <span>Expert</span>
-                      </div>
+                      {/* Skill Description */}
+                      <p className="text-slate-400 text-sm leading-relaxed">
+                        {skill.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -224,93 +213,66 @@ const Skills: React.FC = () => {
           })}
         </div>
 
-        {/* Additional Competencies */}
-        <div className="mt-16">
+        {/* Professional Certifications */}
+        <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Additional Competencies</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Professional Certifications</h3>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Beyond technical skills, I bring strong problem-solving abilities and business acumen 
-              to every data science project.
+              Validated expertise through industry-recognized certifications from leading technology companies.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: TrendingUp,
-                title: 'Business Analytics',
-                description: 'Translating complex data insights into actionable business strategies and KPI improvements.',
-                highlights: ['ROI Analysis', 'Performance Metrics', 'Strategic Planning']
-              },
-              {
-                icon: Brain,
-                title: 'Problem Solving',
-                description: 'Systematic approach to breaking down complex problems and developing innovative solutions.',
-                highlights: ['Root Cause Analysis', 'Algorithm Design', 'Optimization']
-              },
-              {
-                icon: Award,
-                title: 'Project Management',
-                description: 'End-to-end project delivery from requirements gathering to deployment and monitoring.',
-                highlights: ['Agile Methodology', 'Stakeholder Management', 'Documentation']
-              }
-            ].map((competency, index: number) => {
-              const Icon = competency.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-primary-500/50 transition-all duration-300 group"
-                >
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-3 bg-primary-500/10 rounded-xl group-hover:scale-110 transition-transform">
-                      <Icon className="text-primary-400" size={24} />
-                    </div>
-                    <h4 className="text-lg font-semibold text-white">{competency.title}</h4>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {CERTIFICATIONS.map((cert, index: number) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-primary-500/50 transition-all duration-300 group"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-3 bg-primary-500/10 rounded-xl group-hover:scale-110 transition-transform">
+                    <Award className="text-primary-400" size={24} />
                   </div>
-                  
-                  <p className="text-slate-300 leading-relaxed mb-4">
-                    {competency.description}
-                  </p>
-                  
-                  <div className="space-y-2">
-                    {competency.highlights.map((highlight: string, idx: number) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-primary-400 rounded-full"></div>
-                        <span className="text-slate-400 text-sm">{highlight}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <span className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded">
+                    {cert.date}
+                  </span>
                 </div>
-              );
-            })}
+                
+                <h4 className="text-white font-semibold mb-2 leading-tight">{cert.name}</h4>
+                <p className="text-slate-400 text-sm mb-3">{cert.issuer}</p>
+                
+                <span className="inline-block px-3 py-1 bg-primary-900/30 text-primary-300 rounded-full text-xs border border-primary-700/50">
+                  {cert.category}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Learning & Growth */}
-        <div className="mt-16 text-center">
+        {/* Current Focus Areas */}
+        <div className="text-center">
           <div className="bg-gradient-to-r from-primary-500/10 to-indigo-500/10 rounded-2xl p-8 border border-primary-500/20 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Continuous Learning & Growth
+              Current Focus & Graduate Studies
             </h3>
             <p className="text-slate-300 leading-relaxed mb-6">
-              The field of data science evolves rapidly, and I'm committed to staying at the forefront 
-              of new technologies and methodologies. Currently exploring advanced deep learning architectures, 
-              MLOps practices, and cloud-native ML solutions.
+              Pursuing MS in Computer Science at Georgia Institute of Technology while advancing expertise 
+              in autonomous systems, business intelligence, and AI applications that drive measurable business value. 
+              Bridging academic research with real-world applications for operational excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                'Deep Learning (PyTorch)',
-                'MLOps & Model Monitoring', 
-                'Cloud ML (AWS/Azure)',
-                'Advanced NLP (Transformers)',
-                'Time Series Forecasting',
-                'A/B Testing & Experimentation'
-              ].map((skill: string) => (
+                'Advanced AI & Machine Learning',
+                'Business Intelligence & Analytics',
+                'Agricultural Technology & IoT',
+                'Process Optimization & Automation',
+                'Executive Reporting & KPIs',
+                'Data-Driven Decision Making'
+              ].map((area: string) => (
                 <span
-                  key={skill}
+                  key={area}
                   className="px-4 py-2 bg-slate-800/50 text-slate-300 rounded-full text-sm border border-slate-600 hover:border-primary-500 transition-colors"
                 >
-                  {skill}
+                  {area}
                 </span>
               ))}
             </div>
