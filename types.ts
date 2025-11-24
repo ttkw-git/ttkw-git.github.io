@@ -4,9 +4,16 @@ export interface Project {
   id: number;
   title: string;
   description: string;
+  longDescription: string;
   imageUrl: string;
   projectUrl: string;
-  tags: string[];
+  demoUrl?: string;
+  category: string;
+  featured: boolean;
+  technologies: string[];
+  achievements: string[];
+  businessImpact: string;
+  learningOutcomes: string[];
 }
 
 export interface SocialLink {
@@ -18,4 +25,22 @@ export interface SocialLink {
 export interface NavItem {
   label: string;
   href: string;
+}
+
+export interface SkillItem {
+  name: string;
+  level: number;
+  years: string;
+}
+
+export interface Skill {
+  category: string;
+  items: SkillItem[];
+}
+
+export interface Achievement {
+  icon: LucideIcon;
+  value: string;
+  label: string;
+  description: string;
 }
