@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Database, Brain, TrendingUp, Award, Building2, Globe, Cog } from 'lucide-react';
+import { Code, Database, Brain, TrendingUp, Award, Cog } from 'lucide-react';
 
 // Enhanced skill data with business intelligence category and no percentages
 const SKILLS = [
