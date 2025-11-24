@@ -1,6 +1,93 @@
 import React from 'react';
 import { Code, Database, Brain, Globe, Award, TrendingUp } from 'lucide-react';
-import { SKILLS, ACHIEVEMENTS } from '../constants-professional';
+
+// Define types locally since they're not in the main types file yet
+interface SkillItem {
+  name: string;
+  level: number;
+  years: string;
+}
+
+interface Skill {
+  category: string;
+  items: SkillItem[];
+}
+
+interface Achievement {
+  icon: any;
+  value: string;
+  label: string;
+  description: string;
+}
+
+// Local data since it's not in constants yet
+const SKILLS: Skill[] = [
+  { 
+    category: 'Programming Languages',
+    items: [
+      { name: 'Python', level: 90, years: '3+' },
+      { name: 'JavaScript/TypeScript', level: 75, years: '2+' },
+      { name: 'SQL', level: 85, years: '3+' },
+      { name: 'R', level: 70, years: '2+' },
+    ]
+  },
+  {
+    category: 'Machine Learning & Data Science',
+    items: [
+      { name: 'Scikit-learn', level: 88, years: '3+' },
+      { name: 'TensorFlow/Keras', level: 82, years: '2+' },
+      { name: 'Pandas/NumPy', level: 90, years: '3+' },
+      { name: 'Computer Vision (OpenCV)', level: 80, years: '2+' },
+      { name: 'Natural Language Processing', level: 85, years: '2+' },
+      { name: 'Data Visualization (Matplotlib/Seaborn)', level: 88, years: '3+' },
+    ]
+  },
+  {
+    category: 'Web Development',
+    items: [
+      { name: 'React', level: 75, years: '1+' },
+      { name: 'HTML/CSS', level: 85, years: '2+' },
+      { name: 'Node.js', level: 70, years: '1+' },
+      { name: 'Git/GitHub', level: 88, years: '3+' },
+    ]
+  },
+  {
+    category: 'Tools & Platforms',
+    items: [
+      { name: 'Jupyter Notebooks', level: 95, years: '3+' },
+      { name: 'Docker', level: 65, years: '1+' },
+      { name: 'AWS/Cloud Services', level: 60, years: '1+' },
+      { name: 'PostgreSQL/MySQL', level: 78, years: '2+' },
+    ]
+  }
+];
+
+const ACHIEVEMENTS: Achievement[] = [
+  {
+    icon: TrendingUp,
+    value: '94%',
+    label: 'Average Model Accuracy',
+    description: 'Across all ML projects'
+  },
+  {
+    icon: Database,
+    value: '100K+',
+    label: 'Data Points Processed',
+    description: 'In various projects'
+  },
+  {
+    icon: Brain,
+    value: '15+',
+    label: 'ML Models Deployed',
+    description: 'From concept to production'
+  },
+  {
+    icon: Award,
+    value: '85%',
+    label: 'Process Automation',
+    description: 'Average efficiency improvement'
+  }
+];
 
 const Skills: React.FC = () => {
   const getSkillIcon = (category: string) => {
@@ -55,7 +142,7 @@ const Skills: React.FC = () => {
 
         {/* Achievement Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {ACHIEVEMENTS.map((achievement, index) => {
+          {ACHIEVEMENTS.map((achievement: Achievement, index: number) => {
             const Icon = achievement.icon;
             return (
               <div
@@ -75,7 +162,7 @@ const Skills: React.FC = () => {
 
         {/* Skills Categories */}
         <div className="grid lg:grid-cols-2 gap-8">
-          {SKILLS.map((skillCategory, categoryIndex) => {
+          {SKILLS.map((skillCategory: Skill, categoryIndex: number) => {
             const Icon = getSkillIcon(skillCategory.category);
             return (
               <div
@@ -90,7 +177,7 @@ const Skills: React.FC = () => {
                 </div>
 
                 <div className="space-y-6">
-                  {skillCategory.items.map((skill, skillIndex) => (
+                  {skillCategory.items.map((skill: SkillItem, skillIndex: number) => (
                     <div key={skillIndex} className="group">
                       {/* Skill Header */}
                       <div className="flex items-center justify-between mb-2">
@@ -167,7 +254,7 @@ const Skills: React.FC = () => {
                 description: 'End-to-end project delivery from requirements gathering to deployment and monitoring.',
                 highlights: ['Agile Methodology', 'Stakeholder Management', 'Documentation']
               }
-            ].map((competency, index) => {
+            ].map((competency, index: number) => {
               const Icon = competency.icon;
               return (
                 <div
@@ -186,7 +273,7 @@ const Skills: React.FC = () => {
                   </p>
                   
                   <div className="space-y-2">
-                    {competency.highlights.map((highlight, idx) => (
+                    {competency.highlights.map((highlight: string, idx: number) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-primary-400 rounded-full"></div>
                         <span className="text-slate-400 text-sm">{highlight}</span>
@@ -218,7 +305,7 @@ const Skills: React.FC = () => {
                 'Advanced NLP (Transformers)',
                 'Time Series Forecasting',
                 'A/B Testing & Experimentation'
-              ].map((skill) => (
+              ].map((skill: string) => (
                 <span
                   key={skill}
                   className="px-4 py-2 bg-slate-800/50 text-slate-300 rounded-full text-sm border border-slate-600 hover:border-primary-500 transition-colors"
