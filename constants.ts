@@ -85,7 +85,7 @@ export const PROJECTS: Project[] = [
     title: 'Autonomous Agricultural Rover Development',
     description: 'Ongoing development of autonomous navigation system using ROS2 for agricultural applications. Building practical skills in robotics programming, sensor integration, and precision agriculture technology.',
     longDescription: 'Active development of autonomous mini rover using ROS2 and Python for agricultural technology research at University of Winnipeg. Project focuses on autonomous navigation, sensor integration, and data collection systems applicable to precision agriculture and field robotics. Work includes Docker containerization, sensor fusion, and real-time control systems.',
-    imageUrl: 'images/projects/1.jpg',
+    imageUrl: 'images/projects/data_rover.jpg',
     projectUrl: 'https://github.com/ttkw-git/autonomous-mini-rover-ros2',
     demoUrl: '',
     category: 'Agricultural Robotics',
