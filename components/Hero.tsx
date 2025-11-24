@@ -1,6 +1,6 @@
 import React from 'react';
-import { ArrowRight, Download } from 'lucide-react';
-import { SOCIAL_LINKS, ABOUT_TEXT_1, ABOUT_TEXT_2, VALUE_PROPOSITION } from '../constants';
+import { ArrowRight, Download, MapPin, GraduationCap, Award, Briefcase } from 'lucide-react';
+import { SOCIAL_LINKS, VALUE_PROPOSITION } from '../constants';
 import { SocialLink } from '../types';
 
 const Hero: React.FC = () => {
@@ -21,38 +21,89 @@ const Hero: React.FC = () => {
             {/* Content */}
             <div className="text-center lg:text-left">
               <div className="space-y-6">
-                {/* Badge */}
-                <div className="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium">
-                  <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                  Available for Full-Time Opportunities
+                {/* Status Badges */}
+                <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+                  <div className="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-medium">
+                    <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                    Open to New Opportunities
+                  </div>
+                  <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium">
+                    <GraduationCap className="w-4 h-4 mr-2" />
+                    Georgia Tech MS Student
+                  </div>
                 </div>
 
                 {/* Main Headline */}
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  Data Scientist &<br />
                   <span className="bg-gradient-to-r from-primary-400 to-indigo-400 bg-clip-text text-transparent">
-                    ML Engineer
+                    Tony TK Wong
                   </span>
+                  <br />
+                  AI Specialist &<br />
+                  Agricultural Technology Developer
                 </h1>
+
+                {/* Location & Current Focus */}
+                <div className="flex flex-col items-center lg:items-start space-y-2">
+                  <div className="flex items-center space-x-2 text-slate-400">
+                    <MapPin className="w-4 h-4" />
+                    <span>Winnipeg, Manitoba • Canadian Permanent Resident</span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-slate-300">
+                    <Briefcase className="w-4 h-4" />
+                    <span>AI Trainer • Agricultural Robotics Researcher</span>
+                  </div>
+                </div>
 
                 {/* Value Proposition */}
                 <p className="text-xl sm:text-2xl text-slate-300 font-light leading-relaxed max-w-2xl">
                   {VALUE_PROPOSITION}
                 </p>
 
-                {/* Key Stats */}
+                {/* Canadian Experience Stats */}
                 <div className="grid grid-cols-3 gap-6 py-6 border-t border-b border-slate-800/50">
                   <div className="text-center lg:text-left">
                     <div className="text-2xl font-bold text-white">3+</div>
-                    <div className="text-sm text-slate-400">Years Experience</div>
+                    <div className="text-sm text-slate-400">Years in Canada</div>
                   </div>
                   <div className="text-center lg:text-left">
-                    <div className="text-2xl font-bold text-white">94%</div>
-                    <div className="text-sm text-slate-400">Avg Model Accuracy</div>
+                    <div className="text-2xl font-bold text-white">50%</div>
+                    <div className="text-sm text-slate-400">Data Reliability ↑</div>
                   </div>
                   <div className="text-center lg:text-left">
-                    <div className="text-2xl font-bold text-white">15+</div>
-                    <div className="text-sm text-slate-400">ML Projects</div>
+                    <div className="text-2xl font-bold text-white">4.4/4.5</div>
+                    <div className="text-sm text-slate-400">Canadian GPA</div>
+                  </div>
+                </div>
+
+                {/* Current Canadian Focus */}
+                <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
+                  <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                    <GraduationCap className="w-5 h-5 mr-2 text-primary-400" />
+                    Current Focus: Advanced AI & Practical Applications
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-primary-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <span className="text-white font-medium">Advanced AI Studies</span>
+                        <span className="text-slate-400 text-sm block">Georgia Tech MS • Reinforcement Learning, Robotics AI Techniques</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <span className="text-white font-medium">Canadian Agricultural Research</span>
+                        <span className="text-slate-400 text-sm block">University of Winnipeg • Deployed systems at Innovation Farms</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <span className="text-white font-medium">AI Code Quality Specialist</span>
+                        <span className="text-slate-400 text-sm block">Outlier • Professional AI evaluation and training</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -62,7 +113,7 @@ const Hero: React.FC = () => {
                     href="#projects"
                     className="group inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-500 text-white rounded-xl font-semibold transition-all shadow-lg shadow-primary-600/25 hover:shadow-primary-600/40 hover:scale-105"
                   >
-                    View My Projects
+                    View Research Projects
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                   
@@ -75,9 +126,11 @@ const Hero: React.FC = () => {
                   </a>
                 </div>
 
-                {/* Social Proof */}
+                {/* Professional Network */}
                 <div className="flex items-center justify-center lg:justify-start space-x-6 pt-6">
-                  <span className="text-slate-400 text-sm">Connect with me:</span>
+                  <div className="flex items-center space-x-2 text-slate-400">
+                    <span className="text-sm">Connect professionally:</span>
+                  </div>
                   {SOCIAL_LINKS.map((social: SocialLink) => {
                     const Icon = social.icon;
                     return (
@@ -104,14 +157,21 @@ const Hero: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-indigo-500/20 rounded-2xl"></div>
                   <img 
                     src="images/about/1.jpg" 
-                    alt="Tony TK Wong - Data Scientist" 
+                    alt="Tony TK Wong - AI Specialist & Agricultural Technology Developer" 
                     className="relative w-full h-full object-cover rounded-2xl border border-slate-700 shadow-2xl"
                   />
-                  {/* Professional Badge */}
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-slate-900/90 backdrop-blur-md border border-slate-700 rounded-full px-4 py-2">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                      <span className="text-white text-sm font-medium">Open to Work</span>
+                  {/* Professional Achievement Badges */}
+                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <div className="bg-slate-900/90 backdrop-blur-md border border-slate-700 rounded-full px-3 py-1.5">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span className="text-white text-xs font-medium">Available for Hire</span>
+                      </div>
+                    </div>
+                    <div className="bg-red-900/90 backdrop-blur-md border border-red-700 rounded-full px-3 py-1.5">
+                      <div className="flex items-center space-x-2">
+                        <span className="text-red-300 text-xs font-medium">🇨🇦 Canadian Resident</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -126,62 +186,107 @@ const Hero: React.FC = () => {
       <section id="about" className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">About Me</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Professional Background</h2>
             <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Canadian Career Trajectory */}
             <div className="space-y-6">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
-                <h3 className="text-xl font-semibold text-white mb-4">Professional Background</h3>
-                <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                  {ABOUT_TEXT_1}
-                </p>
-                <p className="text-lg text-slate-300 leading-relaxed">
-                  {ABOUT_TEXT_2}
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
+                  <Briefcase className="w-5 h-5 mr-2 text-primary-400" />
+                  Recent Career Development
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center">
+                      <span className="text-primary-400 font-bold text-sm">2024</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium">AI Trainer & Advanced Studies</h4>
+                      <p className="text-slate-400 text-sm">Outlier (Remote Canada) • Georgia Tech MS Program</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center">
+                      <span className="text-indigo-400 font-bold text-sm">2023</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium">Agricultural Robotics Research</h4>
+                      <p className="text-slate-400 text-sm">University of Winnipeg • Innovation Farms deployment</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center">
+                      <span className="text-emerald-400 font-bold text-sm">2021</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium">Canadian Education & Skills Development</h4>
+                      <p className="text-slate-400 text-sm">Red River College • Data Science Program (4.4/4.5 GPA)</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            
+
+            {/* Education & Achievements */}
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-primary-500/10 to-indigo-500/10 rounded-2xl p-8 border border-primary-500/20">
-                <h3 className="text-xl font-semibold text-white mb-6">Core Competencies</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    'Machine Learning',
-                    'Data Analysis', 
-                    'Computer Vision',
-                    'NLP/Text Mining',
-                    'Python/R Programming',
-                    'Statistical Modeling',
-                    'Data Visualization',
-                    'Model Deployment'
-                  ].map((skill: string) => (
-                    <div key={skill} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
-                      <span className="text-slate-300 text-sm">{skill}</span>
+                <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
+                  <Award className="w-5 h-5 mr-2 text-primary-400" />
+                  Education & Professional Development
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <GraduationCap className="text-primary-400 mt-1 flex-shrink-0" size={18} />
+                    <div>
+                      <span className="text-white font-medium block">MS Computer Science (Current)</span>
+                      <span className="text-slate-300 text-sm">Georgia Institute of Technology • Advanced AI & Robotics Focus</span>
                     </div>
-                  ))}
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <Award className="text-emerald-400 mt-1 flex-shrink-0" size={18} />
+                    <div>
+                      <span className="text-white font-medium block">Canadian Academic Excellence</span>
+                      <span className="text-slate-300 text-sm">4.4/4.5 GPA • International Student Scholarship • Red River College</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-4 h-4 bg-indigo-400 rounded-full mt-1 flex-shrink-0"></div>
+                    <div>
+                      <span className="text-white font-medium block">Professional Certifications</span>
+                      <span className="text-slate-300 text-sm">CompTIA A+, Microsoft Azure AI, Google Data Analytics</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Professional Highlights */}
+              {/* Canadian Market Positioning */}
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
-                <h3 className="text-xl font-semibold text-white mb-4">Recent Achievements</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-                    <span className="text-slate-300">Developed ML models with 90%+ accuracy across multiple domains</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-                    <span className="text-slate-300">Automated business processes reducing manual work by 85%</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-                    <span className="text-slate-300">Built end-to-end data pipelines processing 100K+ records</span>
-                  </li>
-                </ul>
+                <h3 className="text-xl font-semibold text-white mb-4">Canadian Market Readiness</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
+                    <span className="text-slate-300 text-sm">Work Authorization</span>
+                    <span className="text-emerald-400 font-medium">✓ Canadian Permanent Resident</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
+                    <span className="text-slate-300 text-sm">Canadian Experience</span>
+                    <span className="text-blue-400 font-medium">3+ Years Research & Education</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
+                    <span className="text-slate-300 text-sm">Technical Skills</span>
+                    <span className="text-purple-400 font-medium">AI, Robotics, Data Engineering</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
+                    <span className="text-slate-300 text-sm">Industry Focus</span>
+                    <span className="text-yellow-400 font-medium">AgTech, AI/ML, Data Systems</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
