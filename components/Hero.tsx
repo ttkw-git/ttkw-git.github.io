@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Download, MapPin, GraduationCap, Award, Briefcase } from 'lucide-react';
+import { ArrowRight, Download, MapPin, GraduationCap, Briefcase } from 'lucide-react';
 import { SOCIAL_LINKS, VALUE_PROPOSITION } from '../constants';
 import { SocialLink } from '../types';
 
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
                 <div className="flex flex-col items-center lg:items-start space-y-2">
                   <div className="flex items-center space-x-2 text-slate-400">
                     <MapPin className="w-4 h-4" />
-                    <span>Winnipeg, Manitoba • Canadian Permanent Resident</span>
+                    <span>Winnipeg, Manitoba, Canada</span>
                   </div>
                   <div className="flex items-center space-x-2 text-slate-300">
                     <Briefcase className="w-4 h-4" />
@@ -60,23 +60,23 @@ const Hero: React.FC = () => {
                   {VALUE_PROPOSITION}
                 </p>
 
-                {/* Canadian Experience Stats */}
+                {/* Professional Stats */}
                 <div className="grid grid-cols-3 gap-6 py-6 border-t border-b border-slate-800/50">
                   <div className="text-center lg:text-left">
                     <div className="text-2xl font-bold text-white">3+</div>
-                    <div className="text-sm text-slate-400">Years in Canada</div>
+                    <div className="text-sm text-slate-400">Years Research</div>
                   </div>
                   <div className="text-center lg:text-left">
                     <div className="text-2xl font-bold text-white">50%</div>
                     <div className="text-sm text-slate-400">Data Reliability ↑</div>
                   </div>
                   <div className="text-center lg:text-left">
-                    <div className="text-2xl font-bold text-white">4.4/4.5</div>
-                    <div className="text-sm text-slate-400">Canadian GPA</div>
+                    <div className="text-2xl font-bold text-white">MS</div>
+                    <div className="text-sm text-slate-400">Computer Science</div>
                   </div>
                 </div>
 
-                {/* Current Canadian Focus */}
+                {/* Current Professional Focus */}
                 <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                     <GraduationCap className="w-5 h-5 mr-2 text-primary-400" />
@@ -93,8 +93,8 @@ const Hero: React.FC = () => {
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
                       <div>
-                        <span className="text-white font-medium">Canadian Agricultural Research</span>
-                        <span className="text-slate-400 text-sm block">University of Winnipeg • Deployed systems at Innovation Farms</span>
+                        <span className="text-white font-medium">Agricultural Robotics Research</span>
+                        <span className="text-slate-400 text-sm block">University of Winnipeg • Autonomous systems with practical applications</span>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
@@ -168,11 +168,6 @@ const Hero: React.FC = () => {
                         <span className="text-white text-xs font-medium">Available for Hire</span>
                       </div>
                     </div>
-                    <div className="bg-red-900/90 backdrop-blur-md border border-red-700 rounded-full px-3 py-1.5">
-                      <div className="flex items-center space-x-2">
-                        <span className="text-red-300 text-xs font-medium">🇨🇦 Canadian Resident</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -191,7 +186,7 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Canadian Career Trajectory */}
+            {/* Career Timeline */}
             <div className="space-y-6">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
                 <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
@@ -205,7 +200,7 @@ const Hero: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-medium">AI Trainer & Advanced Studies</h4>
-                      <p className="text-slate-400 text-sm">Outlier (Remote Canada) • Georgia Tech MS Program</p>
+                      <p className="text-slate-400 text-sm">Outlier • Georgia Tech MS Program</p>
                     </div>
                   </div>
                   
@@ -215,7 +210,7 @@ const Hero: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-medium">Agricultural Robotics Research</h4>
-                      <p className="text-slate-400 text-sm">University of Winnipeg • Innovation Farms deployment</p>
+                      <p className="text-slate-400 text-sm">University of Winnipeg • Practical AI applications</p>
                     </div>
                   </div>
                   
@@ -225,18 +220,17 @@ const Hero: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-medium">Canadian Education & Skills Development</h4>
-                      <p className="text-slate-400 text-sm">Red River College • Data Science Program (4.4/4.5 GPA)</p>
+                      <p className="text-slate-400 text-sm">Red River College • Data Science Program (Academic Excellence)</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Education & Achievements */}
+            {/* Education & Credentials */}
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-primary-500/10 to-indigo-500/10 rounded-2xl p-8 border border-primary-500/20">
-                <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
-                  <Award className="w-5 h-5 mr-2 text-primary-400" />
+                <h3 className="text-xl font-semibold text-white mb-6">
                   Education & Professional Development
                 </h3>
                 <div className="space-y-4">
@@ -249,10 +243,10 @@ const Hero: React.FC = () => {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <Award className="text-emerald-400 mt-1 flex-shrink-0" size={18} />
+                    <div className="w-4 h-4 bg-emerald-400 rounded-full mt-1 flex-shrink-0"></div>
                     <div>
-                      <span className="text-white font-medium block">Canadian Academic Excellence</span>
-                      <span className="text-slate-300 text-sm">4.4/4.5 GPA • International Student Scholarship • Red River College</span>
+                      <span className="text-white font-medium block">Academic Excellence Award</span>
+                      <span className="text-slate-300 text-sm">International Student Scholarship • Red River College</span>
                     </div>
                   </div>
                   
@@ -266,25 +260,25 @@ const Hero: React.FC = () => {
                 </div>
               </div>
 
-              {/* Canadian Market Positioning */}
+              {/* Professional Readiness */}
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
-                <h3 className="text-xl font-semibold text-white mb-4">Canadian Market Readiness</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Professional Readiness</h3>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
+                    <span className="text-slate-300 text-sm">Technical Expertise</span>
+                    <span className="text-primary-400 font-medium">AI, Robotics, Data Engineering</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
+                    <span className="text-slate-300 text-sm">Research Experience</span>
+                    <span className="text-blue-400 font-medium">University-Industry Applications</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
                     <span className="text-slate-300 text-sm">Work Authorization</span>
-                    <span className="text-emerald-400 font-medium">✓ Canadian Permanent Resident</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
-                    <span className="text-slate-300 text-sm">Canadian Experience</span>
-                    <span className="text-blue-400 font-medium">3+ Years Research & Education</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
-                    <span className="text-slate-300 text-sm">Technical Skills</span>
-                    <span className="text-purple-400 font-medium">AI, Robotics, Data Engineering</span>
+                    <span className="text-emerald-400 font-medium">Authorized to work in Canada</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
                     <span className="text-slate-300 text-sm">Industry Focus</span>
-                    <span className="text-yellow-400 font-medium">AgTech, AI/ML, Data Systems</span>
+                    <span className="text-yellow-400 font-medium">AgTech, AI/ML, Automation</span>
                   </div>
                 </div>
               </div>
