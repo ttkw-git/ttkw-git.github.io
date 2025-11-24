@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
+import Skills from './components/Skills.tsx';
 import Projects from './components/Projects.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
-import Skills from './components/Skills.tsx';
 
 const App: React.FC = () => {
   return (
