@@ -25,10 +25,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'Autonomous Agricultural Data Rover',
-    description: 'Led development of autonomous agricultural rover with real-time weed detection capabilities, enabling data-driven decision making for agricultural operations and resource optimization.',
+    title: 'Agricultural Data Rover',
+    description: 'Development of autonomous agricultural rover with real-time weed detection capabilities, enabling data-driven decision making for agricultural operations and resource optimization.',
     longDescription: 'Developed and deployed autonomous agricultural rover using ROS2 and Python for precision farming applications at University of Winnipeg research facilities. Successfully implemented computer vision algorithms for real-time analysis, demonstrating practical AI applications that drive operational efficiency in Canadian agriculture.',
-    imageUrl: 'images/projects/1.jpg',
+    imageUrl: 'images/projects/data_rover.jpg',
     projectUrl: 'https://gist.github.com/ttkw-git/81b6d19b8424e9129592db48f459e3c1',
     demoUrl: '',
     category: 'Agricultural Robotics',
