@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowRight, Download, ExternalLink } from 'lucide-react';
-import { SOCIAL_LINKS, ABOUT_TEXT_1, ABOUT_TEXT_2, VALUE_PROPOSITION } from '../constants-professional';
+import { ArrowRight, Download } from 'lucide-react';
+import { SOCIAL_LINKS, ABOUT_TEXT_1, ABOUT_TEXT_2, VALUE_PROPOSITION } from '../constants';
+import { SocialLink } from '../types';
 
 const Hero: React.FC = () => {
   return (
@@ -77,7 +78,7 @@ const Hero: React.FC = () => {
                 {/* Social Proof */}
                 <div className="flex items-center justify-center lg:justify-start space-x-6 pt-6">
                   <span className="text-slate-400 text-sm">Connect with me:</span>
-                  {SOCIAL_LINKS.map((social) => {
+                  {SOCIAL_LINKS.map((social: SocialLink) => {
                     const Icon = social.icon;
                     return (
                       <a
@@ -155,7 +156,7 @@ const Hero: React.FC = () => {
                     'Statistical Modeling',
                     'Data Visualization',
                     'Model Deployment'
-                  ].map((skill, index) => (
+                  ].map((skill: string) => (
                     <div key={skill} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
                       <span className="text-slate-300 text-sm">{skill}</span>

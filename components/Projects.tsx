@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, TrendingUp, Eye, Award, ChevronDown, ChevronUp } from 'lucide-react';
-import { PROJECTS } from '../constants-professional';
+import { ExternalLink, Github, TrendingUp, Award, ChevronDown, ChevronUp } from 'lucide-react';
+import { PROJECTS } from '../constants';
+import { Project } from '../types';
 
 const Projects: React.FC = () => {
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
@@ -10,7 +11,7 @@ const Projects: React.FC = () => {
 
   const filteredProjects = filter === 'All' 
     ? PROJECTS 
-    : PROJECTS.filter(project => project.category === filter);
+    : PROJECTS.filter((project: Project) => project.category === filter);
 
   const toggleExpanded = (projectId: number) => {
     setExpandedProject(expandedProject === projectId ? null : projectId);
@@ -38,7 +39,7 @@ const Projects: React.FC = () => {
 
           {/* Project Categories Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category) => (
+            {categories.map((category: string) => (
               <button
                 key={category}
                 onClick={() => setFilter(category)}
@@ -56,7 +57,7 @@ const Projects: React.FC = () => {
 
         {/* Projects Grid */}
         <div className="space-y-8">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project: Project, index: number) => (
             <div
               key={project.id}
               className="group bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-primary-500/50 transition-all duration-500 overflow-hidden"
@@ -124,14 +125,14 @@ const Projects: React.FC = () => {
                       Tech Stack
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
+                      {project.technologies?.map((tech: string) => (
                         <span
                           key={tech}
                           className="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-lg border border-slate-700 hover:border-primary-500 transition-colors"
                         >
                           {tech}
                         </span>
-                      ))}
+                      )) || null}
                     </div>
                   </div>
 
@@ -147,13 +148,13 @@ const Projects: React.FC = () => {
                   </div>
 
                   {/* Quick Achievements */}
-                  <div className="grid grid-cols-2 gap-3">
-                    {project.achievements.slice(0, 2).map((achievement, idx) => (
+                  <div className="grid grid-cols-1 gap-3">
+                    {project.achievements?.slice(0, 2).map((achievement: string, idx: number) => (
                       <div key={idx} className="flex items-start space-x-2">
                         <Award className="text-primary-400 mt-0.5 flex-shrink-0" size={16} />
                         <span className="text-slate-300 text-sm">{achievement}</span>
                       </div>
-                    ))}
+                    )) || null}
                   </div>
 
                   {/* Expand/Collapse Button */}
@@ -181,30 +182,34 @@ const Projects: React.FC = () => {
                       </div>
 
                       {/* All Achievements */}
-                      <div>
-                        <h4 className="text-white font-semibold mb-3">Key Achievements</h4>
-                        <div className="space-y-2">
-                          {project.achievements.map((achievement, idx) => (
-                            <div key={idx} className="flex items-start space-x-3">
-                              <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-slate-300">{achievement}</span>
-                            </div>
-                          ))}
+                      {project.achievements && (
+                        <div>
+                          <h4 className="text-white font-semibold mb-3">Key Achievements</h4>
+                          <div className="space-y-2">
+                            {project.achievements.map((achievement: string, idx: number) => (
+                              <div key={idx} className="flex items-start space-x-3">
+                                <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="text-slate-300">{achievement}</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
-                      </div>
+                      )}
 
                       {/* Learning Outcomes */}
-                      <div>
-                        <h4 className="text-white font-semibold mb-3">Technical Learning</h4>
-                        <div className="space-y-2">
-                          {project.learningOutcomes.map((outcome, idx) => (
-                            <div key={idx} className="flex items-start space-x-3">
-                              <div className="w-2 h-2 bg-primary-400 rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-slate-300">{outcome}</span>
-                            </div>
-                          ))}
+                      {project.learningOutcomes && (
+                        <div>
+                          <h4 className="text-white font-semibold mb-3">Technical Learning</h4>
+                          <div className="space-y-2">
+                            {project.learningOutcomes.map((outcome: string, idx: number) => (
+                              <div key={idx} className="flex items-start space-x-3">
+                                <div className="w-2 h-2 bg-primary-400 rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="text-slate-300">{outcome}</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
-                      </div>
+                      )}
 
                       {/* Action Buttons */}
                       <div className="flex flex-wrap gap-3 pt-4">
