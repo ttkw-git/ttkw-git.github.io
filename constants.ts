@@ -1,3 +1,27 @@
+import { Github, Linkedin } from 'lucide-react';
+import { Project, SocialLink, NavItem } from './types';
+
+export const NAV_ITEMS: NavItem[] = [
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
+];
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/tony-tk-wong/',
+    icon: Linkedin,
+  },
+  {
+    name: 'GitHub',
+    url: 'https://github.com/ttkw-git',
+    icon: Github,
+  },
+];
+
 export const PROJECTS: Project[] = [
   {
     id: 1,
@@ -85,7 +109,7 @@ export const PROJECTS: Project[] = [
     title: 'Advanced Autonomous Navigation Platform with Safety Systems',
     description: 'Developed comprehensive autonomous navigation system featuring GPS-SLAM sensor fusion, Ackermann steering constraints, and multi-layered safety systems. Built complete control architecture with custom GUI, waypoint navigation, and real-time obstacle detection.',
     longDescription: 'Engineered sophisticated autonomous navigation platform combining GPS and SLAM for indoor/outdoor operation. Solved critical steering constraint problems by implementing proper Ackermann formula with physical limitations (±36° angles, 0.213m wheelbase). Built comprehensive safety architecture including LiDAR obstacle detection, emergency stop systems, and competing app management. Developed complete control interface with PyQt5 GUI, waypoint-based navigation, and multi-sensor integration.',
-    imageUrl: 'images/projects/data_rover.jpg',
+    imageUrl: 'images/projects/1.jpg',
     projectUrl: 'https://github.com/ttkw-git/autonomous-mini-rover-ros2',
     demoUrl: '',
     category: 'Autonomous Systems Engineering',
@@ -113,15 +137,27 @@ export const PROJECTS: Project[] = [
   }
 ];
 
-// Update core competencies to match the 4 projects
+export const ABOUT_TEXT_1 = "Technical Professional and AI Specialist currently pursuing MS Computer Science at Georgia Institute of Technology. My experience spans machine learning applications from computer vision and NLP to data analytics and autonomous systems engineering. Currently working as AI Trainer for Outlier while conducting advanced robotics research at University of Winnipeg.";
+
+export const ABOUT_TEXT_2 = "My analytical approach combines technical expertise with practical problem-solving, focusing on solutions that deliver measurable improvements. I bring international perspective with strong analytical foundation, now specializing in AI development, autonomous systems, and data-driven solutions for real-world challenges.";
+
+export const VALUE_PROPOSITION = "I develop practical AI and autonomous systems solutions that drive business value, from computer vision and NLP to robotics engineering, with a focus on delivering measurable improvements in operational efficiency.";
+
+// Additional exports that components might need
+export const CURRENT_STATUS = {
+  education: "MS Computer Science at Georgia Institute of Technology (2025-2026)",
+  work: "AI Trainer at Outlier (Freelance) • Research Technician at University of Winnipeg",
+  location: "Winnipeg, Manitoba, Canada",
+  availability: "Open to Full-Time Opportunities"
+};
+
 export const CORE_COMPETENCIES = [
   "Autonomous Systems Engineering & Mathematical Modeling",
   "Safety System Design & Emergency Protocol Development", 
   "ROS2 Architecture & Multi-Sensor Integration",
-  "Computer Vision & Deep Learning (YOLOv5, CNN)",
-  "Data Analytics & Customer Intelligence",
+  "Computer Vision & Deep Learning (CNN)",
+  "Natural Language Processing & Text Analytics",
   "Professional Software Engineering & Problem-Solving"
 ];
 
-// Update professional summary to reflect focused expertise areas
 export const PROFESSIONAL_SUMMARY = "Advanced technical professional with demonstrated expertise in autonomous systems engineering, safety system design, and complex problem-solving. Currently pursuing MS Computer Science at Georgia Institute of Technology while developing production-grade robotics platforms. Proven track record in identifying and solving critical engineering problems, implementing mathematical models, and building comprehensive safety architectures with real-world applications.";
