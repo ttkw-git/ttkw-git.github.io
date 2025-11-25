@@ -82,42 +82,46 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 4,
-    title: 'Autonomous Agricultural Rover Development',
-    description: 'Ongoing development of autonomous navigation system using ROS2 for agricultural applications. Building practical skills in robotics programming, sensor integration, and precision agriculture technology.',
-    longDescription: 'Active development of autonomous mini rover using ROS2 and Python for agricultural technology research at University of Winnipeg. Project focuses on autonomous navigation, sensor integration, and data collection systems applicable to precision agriculture and field robotics. Work includes Docker containerization, sensor fusion, and real-time control systems.',
-    imageUrl: 'images/projects/data_rover.jpg',
+    title: 'Advanced Autonomous Navigation Platform with Safety Systems',
+    description: 'Developed comprehensive autonomous navigation system featuring GPS-SLAM sensor fusion, Ackermann steering constraints, and multi-layered safety systems. Built complete control architecture with custom GUI, waypoint navigation, and real-time obstacle detection.',
+    longDescription: 'Engineered sophisticated autonomous navigation platform combining GPS and SLAM for indoor/outdoor operation. Solved critical steering constraint problems by implementing proper Ackermann formula with physical limitations (±36° angles, 0.213m wheelbase). Built comprehensive safety architecture including LiDAR obstacle detection, emergency stop systems, and competing app management. Developed complete control interface with PyQt5 GUI, waypoint-based navigation, and multi-sensor integration.',
+    imageUrl: 'images/projects/1.jpg',
     projectUrl: 'https://github.com/ttkw-git/autonomous-mini-rover-ros2',
     demoUrl: '',
-    category: 'Agricultural Robotics',
+    category: 'Autonomous Systems Engineering',
     featured: true,
-    tags: ['ROS2', 'Python', 'Agricultural Technology', 'Autonomous Systems'],
+    tags: ['ROS2', 'Autonomous Navigation', 'Safety Systems', 'Sensor Fusion'],
     technologies: [
-      'ROS2', 'Python', 'Docker', 'Robotics Programming', 'Sensor Integration', 'Autonomous Navigation'
+      'ROS2', 'Python', 'PyQt5', 'SLAM', 'GPS Integration', 'LiDAR', 'Nav2', 'Ackermann Steering', 'Multi-sensor Fusion'
     ],
     achievements: [
-      'Developing autonomous navigation system using ROS2 framework',
-      'Building sensor integration capabilities for agricultural data collection',
-      'Implementing Docker containerization for consistent development environment',
-      'Contributing to agricultural technology research at University of Winnipeg'
+      'Solved critical steering constraint problems with mathematical Ackermann formula implementation',
+      'Built GPS-SLAM sensor fusion system for indoor/outdoor autonomous navigation',
+      'Developed multi-layered safety architecture with LiDAR monitoring and emergency stops',
+      'Created complete control GUI with manual and autonomous operation modes',
+      'Implemented waypoint-based navigation with bearing calculations and tolerance settings',
+      'Engineered professional safety manager with global emergency stop capabilities',
+      'Integrated multiple sensor systems (GPS, LiDAR, IMU, cameras) with ROS2 architecture'
     ],
-    businessImpact: 'Autonomous systems research with direct applications to precision agriculture and field robotics technology',
+    businessImpact: 'Production-ready autonomous navigation platform with professional-grade safety systems, applicable to agricultural robotics, warehouse automation, and autonomous vehicle development',
     learningOutcomes: [
-      'Advanced robotics programming with ROS2 in agricultural contexts',
-      'Autonomous navigation and sensor fusion system development',
-      'Agricultural technology requirements and practical implementation challenges'
+      'Advanced problem-solving in robotics constraints and mathematical modeling',
+      'Professional safety system design and multi-layered emergency protocols',
+      'ROS2 system architecture with multi-sensor integration and real-time control',
+      'Hardware-software integration with physical constraint enforcement'
     ]
   }
 ];
 
 // Update core competencies to match the 4 projects
 export const CORE_COMPETENCIES = [
-  "Computer Vision & Deep Learning",
-  "Data Analytics & Customer Intelligence", 
-  "Natural Language Processing",
-  "Agricultural Robotics & Autonomous Systems",
-  "Machine Learning Model Development",
-  "Research & Technical Problem-Solving"
+  "Autonomous Systems Engineering & Mathematical Modeling",
+  "Safety System Design & Emergency Protocol Development", 
+  "ROS2 Architecture & Multi-Sensor Integration",
+  "Computer Vision & Deep Learning (YOLOv5, CNN)",
+  "Data Analytics & Customer Intelligence",
+  "Professional Software Engineering & Problem-Solving"
 ];
 
 // Update professional summary to reflect focused expertise areas
-export const PROFESSIONAL_SUMMARY = "Experienced technical professional with demonstrated expertise in machine learning, computer vision, and data analytics. Currently pursuing MS Computer Science at Georgia Institute of Technology while developing autonomous systems for agricultural applications. Proven track record in building practical AI solutions with verifiable implementations and measurable business impact.";
+export const PROFESSIONAL_SUMMARY = "Advanced technical professional with demonstrated expertise in autonomous systems engineering, safety system design, and complex problem-solving. Currently pursuing MS Computer Science at Georgia Institute of Technology while developing production-grade robotics platforms. Proven track record in identifying and solving critical engineering problems, implementing mathematical models, and building comprehensive safety architectures with real-world applications.";
