@@ -109,7 +109,7 @@ export const PROJECTS: Project[] = [
     title: 'Advanced Autonomous Navigation Platform with Safety Systems',
     description: 'Engineered comprehensive autonomous navigation system featuring GPS integration, Ackermann steering constraints, and multi-layered safety architecture. Built complete control interface with custom GUI, waypoint navigation, and real-time obstacle detection.',
     longDescription: 'Developed sophisticated autonomous navigation platform combining GPS positioning with SLAM capabilities for indoor/outdoor operation. Solved critical steering constraint problems by implementing proper Ackermann formula with physical limitations. Built comprehensive safety architecture including LiDAR obstacle detection, emergency stop systems, and professional control interface with PyQt5 GUI.',
-    imageUrl: 'images/projects/4.jpg',
+    imageUrl: 'images/projects/data_rover.jpg',
     projectUrl: 'https://github.com/ttkw-git/autonomous-mini-rover-ros2',
     demoUrl: '',
     category: 'Autonomous Systems Engineering',
