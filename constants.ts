@@ -104,12 +104,12 @@ export const PROJECTS: Project[] = [
       'Practical application of NLP to real-world content moderation'
     ]
   },
-  {
+    {
     id: 4,
     title: 'Advanced Autonomous Navigation Platform with Safety Systems',
-    description: 'Developed comprehensive autonomous navigation system featuring GPS-SLAM sensor fusion, Ackermann steering constraints, and multi-layered safety systems. Built complete control architecture with custom GUI, waypoint navigation, and real-time obstacle detection.',
-    longDescription: 'Engineered sophisticated autonomous navigation platform combining GPS and SLAM for indoor/outdoor operation. Solved critical steering constraint problems by implementing proper Ackermann formula with physical limitations (±36° angles, 0.213m wheelbase). Built comprehensive safety architecture including LiDAR obstacle detection, emergency stop systems, and competing app management. Developed complete control interface with PyQt5 GUI, waypoint-based navigation, and multi-sensor integration.',
-    imageUrl: 'images/projects/data_rover.jpg',
+    description: 'Engineered comprehensive autonomous navigation system featuring GPS integration, Ackermann steering constraints, and multi-layered safety architecture. Built complete control interface with custom GUI, waypoint navigation, and real-time obstacle detection.',
+    longDescription: 'Developed sophisticated autonomous navigation platform combining GPS positioning with SLAM capabilities for indoor/outdoor operation. Solved critical steering constraint problems by implementing proper Ackermann formula with physical limitations. Built comprehensive safety architecture including LiDAR obstacle detection, emergency stop systems, and professional control interface with PyQt5 GUI.',
+    imageUrl: 'images/projects/4.jpg',
     projectUrl: 'https://github.com/ttkw-git/autonomous-mini-rover-ros2',
     demoUrl: '',
     category: 'Autonomous Systems Engineering',
@@ -119,18 +119,18 @@ export const PROJECTS: Project[] = [
       'ROS2', 'Python', 'PyQt5', 'SLAM', 'GPS Integration', 'LiDAR', 'Nav2', 'Ackermann Steering', 'Multi-sensor Fusion'
     ],
     achievements: [
-      'Solved critical steering constraint problems with mathematical Ackermann formula implementation',
-      'Built GPS-SLAM sensor fusion system for indoor/outdoor autonomous navigation',
-      'Developed multi-layered safety architecture with LiDAR monitoring and emergency stops',
-      'Created complete control GUI with manual and autonomous operation modes',
-      'Implemented waypoint-based navigation with bearing calculations and tolerance settings',
-      'Engineered professional safety manager with global emergency stop capabilities',
-      'Integrated multiple sensor systems (GPS, LiDAR, IMU, cameras) with ROS2 architecture'
+      'Solved critical steering constraint problems with mathematical Ackermann formula implementation (±36° angles, 0.213m wheelbase)',
+      'Integrated GPS positioning with SLAM capabilities for autonomous indoor/outdoor navigation',
+      'Developed comprehensive safety architecture with multi-layered LiDAR monitoring and emergency stop systems',
+      'Created complete PyQt5 control interface with manual and autonomous operation modes',
+      'Implemented waypoint-based navigation with GPS bearing calculations and tolerance settings',
+      'Built thread-safe global safety manager with cross-application emergency stop coordination',
+      'Integrated multiple sensor systems (GPS, LiDAR, IMU, cameras) with ROS2 architecture and Nav2 stack'
     ],
     businessImpact: 'Production-ready autonomous navigation platform with professional-grade safety systems, applicable to agricultural robotics, warehouse automation, and autonomous vehicle development',
     learningOutcomes: [
       'Advanced problem-solving in robotics constraints and mathematical modeling',
-      'Professional safety system design and multi-layered emergency protocols',
+      'Professional safety system design with multi-layered emergency protocols',
       'ROS2 system architecture with multi-sensor integration and real-time control',
       'Hardware-software integration with physical constraint enforcement'
     ]
