@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium">
                     <GraduationCap className="w-4 h-4 mr-2" />
-                    Georgia Tech MS Student
+                    Georgia Tech MS Student (Expected 2027)
                   </div>
                 </div>
 
@@ -117,8 +117,9 @@ const Hero: React.FC = () => {
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
                   
-                  <a 
-                    href="#contact"
+                  <a
+                    href="/Tony_Wong_Resume.pdf"
+                    download="Tony_Wong_Resume.pdf"
                     className="inline-flex items-center justify-center px-8 py-4 bg-slate-800/50 hover:bg-slate-700 text-white rounded-xl font-semibold transition-all border border-slate-700 hover:border-primary-500 backdrop-blur-sm"
                   >
                     <Download className="w-5 h-5 mr-2" />
@@ -161,11 +162,11 @@ const Hero: React.FC = () => {
                     className="relative w-full h-full object-cover rounded-2xl border border-slate-700 shadow-2xl"
                   />
                   {/* Professional Achievement Badges */}
-                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                    <div className="bg-slate-900/90 backdrop-blur-md border border-slate-700 rounded-full px-3 py-1.5">
+                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-slate-900/90 backdrop-blur-md border border-green-500/50 rounded-full px-4 py-2">
                       <div className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        <span className="text-white text-xs font-medium">Available for Hire</span>
+                        <span className="text-white text-xs font-medium">Available for Full-Time Opportunities</span>
                       </div>
                     </div>
                   </div>
@@ -237,7 +238,7 @@ const Hero: React.FC = () => {
                   <div className="flex items-start space-x-3">
                     <GraduationCap className="text-primary-400 mt-1 flex-shrink-0" size={18} />
                     <div>
-                      <span className="text-white font-medium block">MS Computer Science (Current)</span>
+                      <span className="text-white font-medium block">MS Computer Science (2025 - Expected 2027)</span>
                       <span className="text-slate-300 text-sm">Georgia Institute of Technology • Advanced AI & Robotics Focus</span>
                     </div>
                   </div>
@@ -274,7 +275,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
                     <span className="text-slate-300 text-sm">Work Authorization</span>
-                    <span className="text-emerald-400 font-medium">Authorized to work in Canada</span>
+                    <span className="text-emerald-400 font-medium">Canadian Permanent Resident</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg">
                     <span className="text-slate-300 text-sm">Industry Focus</span>
