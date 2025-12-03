@@ -1,4 +1,4 @@
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { Project, SocialLink, NavItem } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
@@ -10,6 +10,11 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    name: 'Email',
+    url: 'mailto:tonywongtk@gmail.com',
+    icon: Mail,
+  },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/tony-tk-wong/',
@@ -145,10 +150,10 @@ export const VALUE_PROPOSITION = "I develop practical AI and autonomous systems 
 
 // Additional exports that components might need
 export const CURRENT_STATUS = {
-  education: "MS Computer Science at Georgia Institute of Technology (2025-2026)",
+  education: "MS Computer Science at Georgia Institute of Technology (2025 - Expected 2027)",
   work: "AI Trainer at Outlier (Freelance) • Research Technician at University of Winnipeg",
   location: "Winnipeg, Manitoba, Canada",
-  availability: "Open to Full-Time Opportunities"
+  availability: "Available for Full-Time Opportunities starting Summer 2025"
 };
 
 export const CORE_COMPETENCIES = [
