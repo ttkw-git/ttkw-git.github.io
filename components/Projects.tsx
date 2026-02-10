@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-indigo-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
                 {/* Project Image */}
                 <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} relative`}>
                   <div className="relative h-64 lg:h-80 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-indigo-500/20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-cyan-500/20"></div>
                     <img 
                       src={project.imageUrl} 
                       alt={project.title}
@@ -137,7 +137,7 @@ const Projects: React.FC = () => {
                   </div>
 
                   {/* Key Results */}
-                  <div className="bg-gradient-to-r from-primary-500/10 to-indigo-500/10 rounded-xl p-6 border border-primary-500/20">
+                  <div className="bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-xl p-6 border border-primary-500/20">
                     <div className="flex items-center space-x-2 mb-3">
                       <TrendingUp className="text-green-400" size={18} />
                       <h4 className="text-white font-semibold">Business Impact</h4>
@@ -244,7 +244,7 @@ const Projects: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary-500/10 to-indigo-500/10 rounded-2xl p-8 border border-primary-500/20 max-w-3xl mx-auto">
+          <div className="bg-gradient-to-r from-primary-500/10 to-cyan-500/10 rounded-2xl p-8 border border-primary-500/20 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Interested in My Work?
             </h3>
