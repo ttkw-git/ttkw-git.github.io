@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
         {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-1/4 w-72 h-72 bg-primary-600/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-3xl"></div>
         </div>
 
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
                     <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
                     Open to New Opportunities
                   </div>
-                  <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium">
+                  <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium">
                     <GraduationCap className="w-4 h-4 mr-2" />
                     Georgia Tech MS Student (Expected 2027)
                   </div>
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
 
                 {/* Main Headline */}
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  <span className="bg-gradient-to-r from-primary-400 to-indigo-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
                     Tony TK Wong
                   </span>
                   <br />
@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                       <div>
                         <span className="text-white font-medium">AI Code Quality Specialist</span>
                         <span className="text-slate-400 text-sm block">Outlier • Professional AI evaluation and training</span>
@@ -153,9 +153,9 @@ const Hero: React.FC = () => {
             {/* Professional Photo */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-indigo-500 rounded-2xl blur-2xl opacity-30 scale-105"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-cyan-500 rounded-2xl blur-2xl opacity-30 scale-105"></div>
                 <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-indigo-500/20 rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-cyan-500/20 rounded-2xl"></div>
                   <img 
                     src="images/about/1.jpg" 
                     alt="Tony TK Wong - AI Specialist & Agricultural Technology Developer" 
@@ -206,8 +206,8 @@ const Hero: React.FC = () => {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center">
-                      <span className="text-indigo-400 font-bold text-sm">2023</span>
+                    <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center">
+                      <span className="text-cyan-400 font-bold text-sm">2023</span>
                     </div>
                     <div>
                       <h4 className="text-white font-medium">Agricultural Robotics Research</h4>
@@ -230,7 +230,7 @@ const Hero: React.FC = () => {
 
             {/* Education & Credentials */}
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-primary-500/10 to-indigo-500/10 rounded-2xl p-8 border border-primary-500/20">
+              <div className="bg-gradient-to-br from-primary-500/10 to-cyan-500/10 rounded-2xl p-8 border border-primary-500/20">
                 <h3 className="text-xl font-semibold text-white mb-6">
                   Education & Professional Development
                 </h3>
@@ -252,7 +252,7 @@ const Hero: React.FC = () => {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-4 h-4 bg-indigo-400 rounded-full mt-1 flex-shrink-0"></div>
+                    <div className="w-4 h-4 bg-cyan-400 rounded-full mt-1 flex-shrink-0"></div>
                     <div>
                       <span className="text-white font-medium block">Professional Certifications</span>
                       <span className="text-slate-300 text-sm">CompTIA A+, Microsoft Azure AI, Google Data Analytics</span>
