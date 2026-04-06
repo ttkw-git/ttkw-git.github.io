@@ -7,12 +7,10 @@ const Hero: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+      <section id="home" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-1/4 w-72 h-72 bg-primary-600/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute top-20 right-20 w-64 h-64 bg-primary-600/10 rounded-full blur-2xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -153,13 +151,11 @@ const Hero: React.FC = () => {
             {/* Professional Photo */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-cyan-500 rounded-2xl blur-2xl opacity-30 scale-105"></div>
                 <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-cyan-500/20 rounded-2xl"></div>
-                  <img 
-                    src="images/about/1.jpg" 
-                    alt="Tony TK Wong - AI Specialist & Agricultural Technology Developer" 
-                    className="relative w-full h-full object-cover rounded-2xl border border-slate-700 shadow-2xl"
+                  <img
+                    src="images/about/1.jpg"
+                    alt="Tony TK Wong - AI Specialist & Agricultural Technology Developer"
+                    className="w-full h-full object-cover rounded-2xl shadow-xl"
                   />
                   {/* Professional Achievement Badges */}
                   <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
@@ -179,7 +175,7 @@ const Hero: React.FC = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-slate-900">
+      <section id="about" className="py-24 bg-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Professional Background</h2>
@@ -189,7 +185,7 @@ const Hero: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Career Timeline */}
             <div className="space-y-6">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
+              <div className="bg-navy-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
                 <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
                   <Briefcase className="w-5 h-5 mr-2 text-primary-400" />
                   Recent Career Development

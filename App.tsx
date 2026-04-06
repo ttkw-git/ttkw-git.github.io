@@ -8,7 +8,7 @@ import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
+    <div className="min-h-screen bg-navy-900 text-slate-100">
       <Navbar />
       <main>
         <Hero />

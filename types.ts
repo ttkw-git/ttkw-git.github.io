@@ -15,6 +15,7 @@ export interface Project {
   achievements?: string[];
   businessImpact?: string;
   learningOutcomes?: string[];
+  metrics?: string;
 }
 
 export interface SocialLink {

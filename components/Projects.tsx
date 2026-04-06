@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-24 bg-slate-950 relative overflow-hidden">
+    <section id="projects" className="py-24 bg-navy-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
@@ -117,6 +117,11 @@ const Projects: React.FC = () => {
                     <p className="text-lg text-slate-300 leading-relaxed mb-4">
                       {project.description}
                     </p>
+                    {project.metrics && (
+                      <p className="text-sm font-medium text-primary-400 mb-2">
+                        {project.metrics}
+                      </p>
+                    )}
                   </div>
 
                   {/* Key Technologies */}
