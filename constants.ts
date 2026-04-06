@@ -5,6 +5,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Research', href: '#research' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -21,7 +22,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ];
 
-// COMBINED AUTONOMOUS ROBOTICS PROJECT
+// ACCURATELY SCOPED PROJECTS
 export const PROJECTS: Project[] = [
   {
     id: 1,
@@ -38,6 +39,28 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 2,
+    title: 'EAGL-I: Agricultural Computer Vision Research',
+    description: 'Research contribution to automated agricultural labeling systems. Implemented YOLO machine learning achieving 90% accuracy in plant segmentation tasks, addressing lighting and bounding box accuracy challenges. Presented findings at NAPPN 2024 conference.',
+    metrics: '90% Plant Segmentation Accuracy • Conference Presentation • YOLO Implementation • Research Collaboration',
+    technicalDetails: 'Contributed to Embedded Automated Generator of Labeled Images (EAGL-I) system research at University of Winnipeg TerraByte Research Lab. Solved critical lighting adaptation challenges for agricultural computer vision applications. Implemented YOLO deep learning model achieving 90% accuracy in plant segmentation. Developed automated data pipelines resulting in 50% improvement in data collection reliability.',
+    businessValue: 'Advances automated crop monitoring and precision agriculture capabilities. Research findings presented at North American Plant Phenotyping Network 2024 conference, contributing to agricultural AI development and automated farming system advancement.',
+    imageUrl: 'images/projects/3.jpg',
+    projectUrl: 'https://github.com/ttkw-git/eagl-i-research',
+    tags: ['Computer Vision', 'YOLO', 'Agricultural AI', 'Conference Presentation', 'Research Collaboration'],
+  },
+  {
+    id: 3,
+    title: 'Branch Data Systems: Banking Operations Optimization',
+    description: 'Data processing and business intelligence improvements for assigned branch portfolio at Hang Seng Bank. Built SQL-based reporting systems reducing errors by 25%, automated data processing cutting manual work by 40%, and improved data reliability by 50% through systematic automation.',
+    metrics: '25% Error Reduction • 40% Process Automation • 50% Reliability Improvement • Portfolio Management',
+    technicalDetails: 'Developed SQL-based reporting systems for branch-level sales data within assigned portfolio operations. Built automated data processing workflows reducing manual handling overhead. Implemented data validation and quality controls improving reliability. Contributed to broader Knowledge Management System implementation using Agile methodology.',
+    businessValue: 'Delivered measurable operational improvements in branch banking operations. Reduced manual data processing overhead while maintaining data accuracy and regulatory compliance. Enabled more efficient portfolio management and faster decision-making for branch operations.',
+    imageUrl: 'images/projects/2.jpg',
+    projectUrl: 'https://github.com/ttkw-git/banking-data-portfolio',
+    tags: ['SQL', 'Data Processing', 'Business Intelligence', 'Branch Operations', 'Process Automation'],
+  },
+  {
+    id: 4,
     title: 'Deep Learning Shoe Brand Classifier',
     description: 'Production-ready CNN classifier achieving 82% validation accuracy using VGG16 transfer learning. Built for automated social media marketing analysis with comprehensive model evaluation, confusion matrix analysis, and successful external image validation testing.',
     metrics: '82% Validation Accuracy • VGG16 Transfer Learning • 15K+ Training Images • External Test Validation',
@@ -47,20 +70,9 @@ export const PROJECTS: Project[] = [
     projectUrl: 'https://gist.github.com/ttkw-git/81b6d19b8424e9129592db48f459e3c1',
     tags: ['TensorFlow', 'Transfer Learning', 'Computer Vision', 'Production ML'],
   },
-  {
-    id: 3,
-    title: 'Customer Segmentation Analytics Pipeline',
-    description: 'Scalable unsupervised learning pipeline using K-means clustering to identify distinct market segments from mall customer data. Delivered actionable business insights for targeted marketing strategies with quantified customer behavior patterns and automated reporting capabilities.',
-    metrics: '4 Distinct Segments Identified • 95% Variance Explained • Scalable Data Pipeline',
-    technicalDetails: 'End-to-end data science pipeline featuring automated preprocessing, optimal cluster determination via elbow method and silhouette analysis, and comprehensive segmentation validation. Includes automated visualization generation and business-readable insights extraction for marketing team consumption.',
-    businessValue: 'Provided quantified customer segmentation enabling targeted marketing campaigns with measurably improved conversion rates. Demonstrates data-driven business decision support and automated analytics pipeline development.',
-    imageUrl: 'images/projects/2.jpg',
-    projectUrl: 'https://gist.github.com/ttkw-git/0306d2680dacb9050acebbd1d22e690c',
-    tags: ['Scikit-learn', 'K-Means Clustering', 'Data Pipeline', 'Business Intelligence'],
-  },
 ];
 
-// ENHANCED ABOUT TEXT - Professional positioning
-export const ABOUT_TEXT_1 = "Currently pursuing MS Computer Science at Georgia Tech while working as AI Trainer at Outlier. My research and development focus spans autonomous robotics systems, sensor fusion architectures, and safety-critical system design, bridging academic research with practical engineering implementation.";
+// ACCURATELY POSITIONED ABOUT TEXT
+export const ABOUT_TEXT_1 = "Currently pursuing MS Computer Science at Georgia Tech while working as AI Trainer at Outlier. My technical focus spans autonomous robotics systems, computer vision for agricultural applications, and data systems optimization. Active research collaborator with conference presentation at NAPPN 2024.";
 
-export const ABOUT_TEXT_2 = "Experience includes agricultural robotics research at University of Winnipeg, Business Technology Analyst role at Hang Seng Bank, and hands-on autonomous systems development. Passionate about developing robust, safety-critical systems that operate reliably in real-world environments while maintaining engineering rigor and technical honesty.";
+export const ABOUT_TEXT_2 = "Experience includes 8+ years in banking data systems at Hang Seng Bank, agricultural robotics research collaboration at University of Winnipeg TerraByte Lab, and hands-on autonomous systems development. Combining academic research contributions with practical system implementation and enterprise data operations experience.";

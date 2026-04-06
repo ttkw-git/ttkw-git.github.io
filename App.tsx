@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import Experience from './components/Experience.tsx';
 import Projects from './components/Projects.tsx';
+import Research from './components/Research.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
 
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Hero />
         <Experience />
         <Projects />
+        <Research />
         <Contact />
       </main>
       <Footer />
