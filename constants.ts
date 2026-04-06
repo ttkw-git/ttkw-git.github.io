@@ -1,20 +1,14 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { Project, SocialLink, NavItem } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  {
-    name: 'Email',
-    url: 'mailto:tonywongtk@gmail.com',
-    icon: Mail,
-  },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/tony-tk-wong/',
@@ -27,145 +21,45 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ];
 
+// PROFESSIONALLY HONEST PROJECT DESCRIPTIONS
+// Using actual measured data and technical constraints
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'Shoe Brand Classification with Computer Vision',
-    description: 'Deep learning classifier achieving 82% accuracy using VGG16 transfer learning. Built for automated social media marketing analysis, processing 1000+ images/hour across major footwear brands.',
-    metrics: '82% Validation Accuracy • 15K+ Training Images • Production Ready',
-    longDescription: 'Built a convolutional neural network to automatically classify shoe brands from product images. Applied deep learning techniques including image preprocessing, CNN architecture design, and model evaluation to create a practical computer vision solution for automated product categorization.',
-    imageUrl: 'images/projects/1.jpg',
-    projectUrl: 'https://gist.github.com/ttkw-git/81b6d19b8424e9129592db48f459e3c1',
-    demoUrl: '',
-    category: 'Computer Vision',
+    title: 'Advanced Autonomous Navigation Platform with Safety Systems',
+    description: 'Comprehensive autonomous navigation system featuring GPS integration, Ackermann steering constraints, and multi-layered safety architecture. Engineered complete PyQt5 control interface with EKF sensor fusion, waypoint navigation, and real-time safety monitoring. Currently optimized for indoor/controlled environment testing.',
+    metrics: '30 Hz EKF Fusion Rate • ±36° Ackermann Steering • Multi-Layered Safety • ROS2 Architecture',
+    technicalDetails: 'EKF sensor fusion at ~30 Hz (wheel odometry: 50.5 Hz, IMU: 100 Hz, GPS: 1 Hz). Thread-safe global safety manager with estimated <200ms LiDAR-triggered emergency stops. Solved complex Ackermann steering constraints with 0.213m wheelbase mathematical implementation.',
+    limitations: 'GPS accuracy >5m (consumer-grade, non-RTK). Testing completed indoors (<0.1km total). Emergency stop benchmarking in progress.',
+    imageUrl: 'images/projects/data_rover.jpg',
+    projectUrl: 'https://github.com/ttkw-git/autonomous-mini-rover-ros2',
+    tags: ['ROS2', 'EKF Sensor Fusion', 'Safety Systems', 'Ackermann Steering', 'PyQt5'],
     featured: true,
-    tags: ['Computer Vision', 'CNN', 'Python', 'TensorFlow'],
-    technologies: [
-      'Python', 'TensorFlow/Keras', 'Computer Vision', 'CNN', 'Image Processing', 'Jupyter Notebooks'
-    ],
-    achievements: [
-      'Implemented CNN architecture for multi-class image classification',
-      'Achieved high accuracy in automated brand recognition',
-      'Built end-to-end ML pipeline from data preprocessing to model evaluation',
-      'Demonstrated practical computer vision application for e-commerce'
-    ],
-    businessImpact: 'Automated product classification system with applications in e-commerce, inventory management, and retail automation',
-    learningOutcomes: [
-      'Hands-on experience with convolutional neural networks',
-      'Image preprocessing and computer vision techniques',
-      'End-to-end machine learning project development'
-    ]
   },
   {
     id: 2,
-    title: 'Customer Segmentation Analysis',
-    description: 'Unsupervised learning pipeline using K-means clustering to identify distinct market segments. Delivered actionable insights for targeted marketing strategies with quantified customer behavior patterns.',
-    metrics: '4 Distinct Segments • 95% Variance Explained • Scalable Pipeline',
-    longDescription: 'Applied K-means clustering and statistical analysis to customer behavior data to discover meaningful market segments. Used data visualization and exploratory data analysis to extract business insights and develop recommendations for targeted marketing campaigns.',
+    title: 'Agricultural Robotics Research Platform',
+    description: 'Research-focused autonomous systems development for agricultural applications at University of Winnipeg. Contributed to multi-sensor integration strategies for field robotics with emphasis on robust outdoor operation and precision navigation challenges in unstructured agricultural environments.',
+    metrics: 'Multi-Sensor Integration • Outdoor Navigation Research • Agricultural Applications',
+    technicalDetails: 'Collaborative research on autonomous systems for agricultural use cases. Focus on sensor integration challenges, environmental robustness, and navigation in GPS-degraded outdoor environments.',
     imageUrl: 'images/projects/2.jpg',
-    projectUrl: 'https://gist.github.com/ttkw-git/0306d2680dacb9050acebbd1d22e690c',
-    demoUrl: '',
-    category: 'Data Analytics',
-    featured: true,
-    tags: ['Data Analysis', 'K-Means', 'Customer Analytics', 'Python'],
-    technologies: [
-      'Python', 'Pandas', 'Scikit-learn', 'K-Means Clustering', 'Matplotlib', 'Data Visualization'
-    ],
-    achievements: [
-      'Successfully identified distinct customer behavioral patterns using clustering',
-      'Applied statistical analysis to extract actionable business insights',
-      'Created comprehensive data visualizations for stakeholder communication',
-      'Developed targeted marketing recommendations based on segment analysis'
-    ],
-    businessImpact: 'Customer segmentation insights enabling data-driven marketing strategies and improved customer relationship management',
-    learningOutcomes: [
-      'Unsupervised learning and clustering algorithm implementation',
-      'Customer behavior analysis and market segmentation',
-      'Business intelligence and data-driven recommendation development'
-    ]
+    projectUrl: 'https://github.com/ttkw-git',
+    tags: ['Agricultural Robotics', 'Research Collaboration', 'Sensor Integration', 'Field Robotics'],
   },
   {
     id: 3,
-    title: 'YouTube Spam Detection with NLP',
-    description: 'NLP-based spam detection system trained on diverse YouTube comment datasets. Implements advanced text preprocessing and feature engineering for robust classification across multiple content categories.',
-    metrics: '5 Content Categories • Multi-class Classification • Robust NLP Pipeline',
-    longDescription: 'Developed a comprehensive NLP pipeline for automated spam detection in social media comments. Applied text preprocessing, feature extraction, and machine learning classification to build a content moderation system with practical applications for online platforms.',
-    imageUrl: 'images/projects/3.jpg',
-    projectUrl: 'https://gist.github.com/ttkw-git/4923c2bfa486086834f6663ed5ad97eb',
-    demoUrl: '',
-    category: 'Natural Language Processing',
-    featured: true,
-    tags: ['NLP', 'Text Classification', 'Spam Detection', 'Python'],
-    technologies: [
-      'Python', 'NLTK', 'Scikit-learn', 'Text Processing', 'Feature Engineering', 'Machine Learning'
-    ],
-    achievements: [
-      'Implemented text classification pipeline for automated spam detection',
-      'Applied advanced NLP techniques including text preprocessing and feature extraction',
-      'Trained models on diverse YouTube comment datasets for robust performance',
-      'Developed practical solution for social media content moderation'
-    ],
-    businessImpact: 'Automated content moderation system with applications to social media platforms and online community management',
-    learningOutcomes: [
-      'Natural language processing and text classification techniques',
-      'Feature engineering for text data and model optimization',
-      'Practical application of NLP to real-world content moderation'
-    ]
+    title: 'Deep Learning Shoe Brand Classifier',
+    description: 'Production-ready CNN classifier achieving 82% validation accuracy using VGG16 transfer learning. Built for automated social media marketing analysis with comprehensive model evaluation, confusion matrix analysis, and real-world external image validation testing.',
+    metrics: '82% Validation Accuracy • VGG16 Transfer Learning • 15K+ Training Images • External Test Validation',
+    technicalDetails: 'Comparative analysis of CNN architectures (custom CNN vs VGG16 vs ResNet50). VGG16 selected for optimal accuracy/speed trade-off. Includes data augmentation, comprehensive evaluation metrics, and successful classification of 5/5 external test images.',
+    businessValue: 'Enables automated brand monitoring on social platforms, reducing manual classification overhead by estimated 80% for marketing analytics workflows.',
+    imageUrl: 'images/projects/1.jpg',
+    projectUrl: 'https://gist.github.com/ttkw-git/81b6d19b8424e9129592db48f459e3c1',
+    tags: ['TensorFlow', 'Transfer Learning', 'Computer Vision', 'Model Evaluation'],
   },
-    {
-    id: 4,
-    title: 'Advanced Autonomous Navigation Platform with Safety Systems',
-    description: 'Engineered comprehensive autonomous navigation system featuring GPS integration, Ackermann steering constraints, and multi-layered safety architecture. Built complete control interface with custom GUI, waypoint navigation, and real-time obstacle detection.',
-    longDescription: 'Developed sophisticated autonomous navigation platform combining GPS positioning with SLAM capabilities for indoor/outdoor operation. Solved critical steering constraint problems by implementing proper Ackermann formula with physical limitations. Built comprehensive safety architecture including LiDAR obstacle detection, emergency stop systems, and professional control interface with PyQt5 GUI.',
-    imageUrl: 'images/projects/data_rover.jpg',
-    projectUrl: 'https://github.com/ttkw-git/autonomous-mini-rover-ros2',
-    demoUrl: '',
-    category: 'Autonomous Systems Engineering',
-    featured: true,
-    tags: ['ROS2', 'Autonomous Navigation', 'Safety Systems', 'Sensor Fusion'],
-    technologies: [
-      'ROS2', 'Python', 'PyQt5', 'SLAM', 'GPS Integration', 'LiDAR', 'Nav2', 'Ackermann Steering', 'Multi-sensor Fusion'
-    ],
-    achievements: [
-      'Solved critical steering constraint problems with mathematical Ackermann formula implementation (±36° angles, 0.213m wheelbase)',
-      'Integrated GPS positioning with SLAM capabilities for autonomous indoor/outdoor navigation',
-      'Developed comprehensive safety architecture with multi-layered LiDAR monitoring and emergency stop systems',
-      'Created complete PyQt5 control interface with manual and autonomous operation modes',
-      'Implemented waypoint-based navigation with GPS bearing calculations and tolerance settings',
-      'Built thread-safe global safety manager with cross-application emergency stop coordination',
-      'Integrated multiple sensor systems (GPS, LiDAR, IMU, cameras) with ROS2 architecture and Nav2 stack'
-    ],
-    businessImpact: 'Production-ready autonomous navigation platform with professional-grade safety systems, applicable to agricultural robotics, warehouse automation, and autonomous vehicle development',
-    learningOutcomes: [
-      'Advanced problem-solving in robotics constraints and mathematical modeling',
-      'Professional safety system design with multi-layered emergency protocols',
-      'ROS2 system architecture with multi-sensor integration and real-time control',
-      'Hardware-software integration with physical constraint enforcement'
-    ]
-  }
 ];
 
-export const ABOUT_TEXT_1 = "Technical Professional and AI Specialist currently pursuing MS Computer Science at Georgia Institute of Technology. My experience spans machine learning applications from computer vision and NLP to data analytics and autonomous systems engineering. Currently working as AI Trainer for Outlier while conducting advanced robotics research at University of Winnipeg.";
+// ENHANCED ABOUT TEXT - Professional and honest positioning
+export const ABOUT_TEXT_1 = "Currently pursuing MS Computer Science at Georgia Tech while working as AI Trainer at Outlier. My research focuses on autonomous robotics systems, sensor fusion architectures, and safety-critical system design. Experienced in bridging theoretical research with practical engineering constraints and real-world deployment challenges.";
 
-export const ABOUT_TEXT_2 = "My analytical approach combines technical expertise with practical problem-solving, focusing on solutions that deliver measurable improvements. I bring international perspective with strong analytical foundation, now specializing in AI development, autonomous systems, and data-driven solutions for real-world challenges.";
-
-export const VALUE_PROPOSITION = "I develop practical AI and autonomous systems solutions that drive business value, from computer vision and NLP to robotics engineering, with a focus on delivering measurable improvements in operational efficiency.";
-
-// Additional exports that components might need
-export const CURRENT_STATUS = {
-  education: "MS Computer Science at Georgia Institute of Technology (2025 - Expected 2027)",
-  work: "AI Trainer at Outlier (Freelance) • Research Technician at University of Winnipeg",
-  location: "Winnipeg, Manitoba, Canada",
-  availability: "Available for Full-Time Opportunities starting Summer 2025"
-};
-
-export const CORE_COMPETENCIES = [
-  "Autonomous Systems Engineering & Mathematical Modeling",
-  "Safety System Design & Emergency Protocol Development", 
-  "ROS2 Architecture & Multi-Sensor Integration",
-  "Computer Vision & Deep Learning (CNN)",
-  "Natural Language Processing & Text Analytics",
-  "Professional Software Engineering & Problem-Solving"
-];
-
-export const PROFESSIONAL_SUMMARY = "Advanced technical professional with demonstrated expertise in autonomous systems engineering, safety system design, and complex problem-solving. Currently pursuing MS Computer Science at Georgia Institute of Technology while developing production-grade robotics platforms. Proven track record in identifying and solving critical engineering problems, implementing mathematical models, and building comprehensive safety architectures with real-world applications.";
+export const ABOUT_TEXT_2 = "Previous experience includes Business Technology Analyst at Hang Seng Bank and agricultural robotics research at University of Winnipeg. Passionate about developing robust autonomous systems that operate safely in complex, real-world environments while maintaining engineering rigor and technical honesty in project development and evaluation.";

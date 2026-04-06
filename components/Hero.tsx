@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Download, MapPin, GraduationCap, Briefcase } from 'lucide-react';
-import { SOCIAL_LINKS, VALUE_PROPOSITION } from '../constants';
+import { SOCIAL_LINKS, ABOUT_TEXT_1 } from '../constants';
 import { SocialLink } from '../types';
 
 const Hero: React.FC = () => {
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
 
                 {/* Value Proposition */}
                 <p className="text-xl sm:text-2xl text-slate-300 font-light leading-relaxed max-w-2xl">
-                  {VALUE_PROPOSITION}
+                  {ABOUT_TEXT_1}
                 </p>
 
                 {/* Professional Stats */}

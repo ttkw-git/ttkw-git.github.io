@@ -4,18 +4,14 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  longDescription?: string;
+  metrics: string;
+  technicalDetails?: string;
+  limitations?: string;
+  businessValue?: string;
   imageUrl: string;
   projectUrl: string;
-  demoUrl?: string;
-  category?: string;
-  featured?: boolean;
   tags: string[];
-  technologies?: string[];
-  achievements?: string[];
-  businessImpact?: string;
-  learningOutcomes?: string[];
-  metrics?: string;
+  featured?: boolean;
 }
 
 export interface SocialLink {
@@ -27,22 +23,4 @@ export interface SocialLink {
 export interface NavItem {
   label: string;
   href: string;
-}
-
-export interface SkillItem {
-  name: string;
-  level: number;
-  years: string;
-}
-
-export interface Skill {
-  category: string;
-  items: SkillItem[];
-}
-
-export interface Achievement {
-  icon: LucideIcon;
-  value: string;
-  label: string;
-  description: string;
 }
