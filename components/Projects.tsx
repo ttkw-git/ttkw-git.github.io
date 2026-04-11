@@ -160,8 +160,8 @@ const Projects: React.FC = () => {
                             <iframe
                               src={project.comparisonUrl}
                               width="100%"
-                              height="580px"
-                              className="border border-slate-700 rounded-lg"
+                              height="760px"
+                              className="border border-slate-700 rounded-xl bg-[#f5f2eb] overflow-hidden"
                               title="LangSmith Model Comparison"
                             />
                           </div>
