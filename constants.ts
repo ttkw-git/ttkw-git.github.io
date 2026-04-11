@@ -70,6 +70,19 @@ export const PROJECTS: Project[] = [
     projectUrl: 'https://gist.github.com/ttkw-git/81b6d19b8424e9129592db48f459e3c1',
     tags: ['TensorFlow', 'Transfer Learning', 'Computer Vision', 'Production ML'],
   },
+  {
+  id: 5,
+  title: 'Multi-Agent LLM Pipeline with LangSmith Observability',
+  description: 'Production-style multi-agent content pipeline built with LangGraph, featuring a Researcher → Writer → Reviewer workflow with automated revision loops. Integrated full LangSmith tracing to compare Claude Sonnet 4.6 vs Haiku 4.5 on identical tasks, measuring latency, token cost, and revision behavior end-to-end.',
+  metrics: '4× Cost Reduction with Haiku • 2.7× Faster Latency • 3-Revision Loop • Full LangSmith Trace Observability',
+  technicalDetails: 'LangGraph state machine with typed WorkflowState passed across three @traceable agent nodes. Reviewer agent produces structured JSON scoring (1–10) to drive conditional edges — loops writer back on score <8, caps at 3 iterations to prevent infinite cycles. LangSmith captures per-node latency, token usage, and prompt/response at every span. Model comparison: Sonnet 4.6 (97.58s, 9,895 tokens, $0.0801) vs Haiku 4.5 (35.89s, 7,441 tokens, $0.0196) on identical topic — both required 3 revision loops, demonstrating haiku matches sonnet quality trajectory at 4× lower cost.',
+  limitations: 'Reviewer scoring is LLM-based and non-deterministic — same draft may receive different scores across runs. Article quality evaluation is subjective; no ground-truth dataset used for this comparison. Pipeline optimized for text content tasks; tool-use and RAG extensions not yet implemented.',
+  businessValue: 'Demonstrates production AI engineering thinking: observable pipelines, cost-quality tradeoffs, and agent design beyond single LLM calls. Directly applicable to content automation, document drafting, and any multi-step LLM workflow requiring quality gates and revision control.',
+  imageUrl: 'images/projects/multi_agent_tracer.jpg',
+  projectUrl: 'https://github.com/ttkw-git/multi-agent-tracer',
+  tags: ['LangGraph', 'LangSmith', 'Multi-Agent', 'LLM Observability', 'Anthropic', 'Python'],
+  featured: true,
+},
 ];
 
 // ACCURATELY POSITIONED ABOUT TEXT
