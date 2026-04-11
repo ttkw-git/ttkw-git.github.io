@@ -81,6 +81,7 @@ export const PROJECTS: Project[] = [
   imageUrl: 'images/projects/multi_agent_tracer.jpg',
   projectUrl: 'https://github.com/ttkw-git/multi-agent-tracer',
   tags: ['LangGraph', 'LangSmith', 'Multi-Agent', 'LLM Observability', 'Anthropic', 'Python'],
+  comparisonUrl: '/comparison/langsmith_model_comparison_portfolio.html',
 },
 ];
 

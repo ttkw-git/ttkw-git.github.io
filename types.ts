@@ -8,6 +8,7 @@ export interface Project {
   technicalDetails?: string;
   limitations?: string;
   businessValue?: string;
+  comparisonUrl?: string;
   imageUrl: string;
   projectUrl: string;
   tags: string[];

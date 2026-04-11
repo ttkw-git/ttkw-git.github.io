@@ -1,0 +1,419 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .port {
+    font-family: 'DM Mono', monospace;
+    padding: 2rem 1.5rem 3rem;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 28px;
+    color: var(--color-text-primary);
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .topic-tag {
+    display: inline-block;
+    font-size: 11px;
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 4px;
+    padding: 3px 10px;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .model-card {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 1.25rem;
+    background: var(--color-background-primary);
+  }
+
+  .model-card.sonnet {
+    border-color: #534AB7;
+    border-width: 1px;
+  }
+
+  .model-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .model-card.sonnet .model-label { color: #534AB7; }
+  .model-card.haiku .model-label { color: var(--color-text-secondary); }
+
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 6px 0;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    font-size: 12px;
+  }
+  .stat-row:last-child { border-bottom: none; }
+
+  .stat-label { color: var(--color-text-tertiary); }
+  .stat-value { font-weight: 500; color: var(--color-text-primary); }
+
+  .stat-value.highlight { color: #1D9E75; }
+  .stat-value.dim { color: var(--color-text-secondary); }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 1rem;
+  }
+
+  .timeline-wrap {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 1.25rem;
+    background: var(--color-background-primary);
+    margin-bottom: 2rem;
+  }
+
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 11px;
+  }
+
+  .tl-model { font-weight: 500; color: var(--color-text-primary); }
+  .tl-total { color: var(--color-text-tertiary); }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 1.25rem;
+  }
+
+  .tl-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .tl-name {
+    width: 68px;
+    flex-shrink: 0;
+    color: var(--color-text-secondary);
+    font-size: 10px;
+  }
+
+  .tl-bar-wrap {
+    flex: 1;
+    height: 18px;
+    background: var(--color-background-secondary);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .tl-bar {
+    height: 100%;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    font-size: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .tl-tokens {
+    width: 36px;
+    text-align: right;
+    color: var(--color-text-tertiary);
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+
+  .bar-researcher { background: #D3D1C7; color: #2C2C2A; }
+  .bar-writer-1   { background: #CECBF6; color: #26215C; }
+  .bar-writer-2   { background: #AFA9EC; color: #26215C; }
+  .bar-writer-3   { background: #7F77DD; color: #EEEDFE; }
+  .bar-reviewer   { background: #E1F5EE; color: #085041; }
+  .bar-reviewer-2 { background: #9FE1CB; color: #04342C; }
+  .bar-reviewer-3 { background: #5DCAA5; color: #04342C; }
+
+  .divider {
+    height: 0.5px;
+    background: var(--color-border-tertiary);
+    margin: 1.25rem 0;
+  }
+
+  .insight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+
+  .insight-card {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 0.875rem;
+  }
+
+  .insight-num {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .insight-num span {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+  }
+
+  .insight-desc {
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+    line-height: 1.5;
+  }
+
+  .takeaway {
+    border-left: 2px solid #534AB7;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .takeaway p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+
+  .takeaway p + p { margin-top: 0.5rem; }
+
+  .stack-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 2rem;
+  }
+
+  .tag {
+    font-size: 10px;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 3px;
+    padding: 3px 8px;
+    color: var(--color-text-tertiary);
+    letter-spacing: 0.05em;
+  }
+
+  .footer {
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+    border-top: 0.5px solid var(--color-border-tertiary);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+</style>
+
+<div class="port">
+  <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">LangSmith model comparison portfolio: Claude Sonnet vs Haiku on a multi-agent writing pipeline</h2>
+
+  <p class="eyebrow">Portfolio project</p>
+  <h1>Multi-agent workflow<br><em>model comparison</em></h1>
+  <p class="subtitle">Researcher → Writer → Reviewer pipeline traced with LangSmith.<br>Same topic, two Anthropic models, measured end-to-end.</p>
+
+  <div class="topic-tag">topic: "the ethics of AI replacing human jobs"</div>
+
+  <p class="section-label">Model metrics</p>
+  <div class="metrics-grid">
+    <div class="model-card sonnet">
+      <div class="model-label">claude sonnet 4.6</div>
+      <div class="stat-row"><span class="stat-label">latency</span><span class="stat-value dim">97.58s</span></div>
+      <div class="stat-row"><span class="stat-label">tokens</span><span class="stat-value dim">9,895</span></div>
+      <div class="stat-row"><span class="stat-label">cost</span><span class="stat-value dim">$0.0801</span></div>
+      <div class="stat-row"><span class="stat-label">revisions</span><span class="stat-value">3</span></div>
+    </div>
+    <div class="model-card haiku">
+      <div class="model-label">claude haiku 4.5</div>
+      <div class="stat-row"><span class="stat-label">latency</span><span class="stat-value highlight">35.89s</span></div>
+      <div class="stat-row"><span class="stat-label">tokens</span><span class="stat-value highlight">7,441</span></div>
+      <div class="stat-row"><span class="stat-label">cost</span><span class="stat-value highlight">$0.0196</span></div>
+      <div class="stat-row"><span class="stat-label">revisions</span><span class="stat-value">3</span></div>
+    </div>
+  </div>
+
+  <p class="section-label">Agent timelines</p>
+
+  <div class="timeline-wrap">
+    <div class="timeline-header">
+      <span class="tl-model">sonnet 4.6</span>
+      <span class="tl-total">97.58s total</span>
+    </div>
+    <div class="timeline">
+      <div class="tl-row">
+        <span class="tl-name">researcher</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-researcher" style="width:14.5%">14.1s</div></div>
+        <span class="tl-tokens">603</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">writer 1</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-writer-1" style="width:18.3%">17.9s</div></div>
+        <span class="tl-tokens">1.4K</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">reviewer 1</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-reviewer" style="width:8.1%">7.9s</div></div>
+        <span class="tl-tokens">1.3K</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">writer 2</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-writer-2" style="width:19.1%">18.7s</div></div>
+        <span class="tl-tokens">1.8K</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">reviewer 2</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-reviewer-2" style="width:9.8%">9.6s</div></div>
+        <span class="tl-tokens">1.4K</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">writer 3</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-writer-3" style="width:21.4%">20.9s</div></div>
+        <span class="tl-tokens">2.0K</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">reviewer 3</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-reviewer-3" style="width:8.6%">8.4s</div></div>
+        <span class="tl-tokens">1.5K</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="timeline-header">
+      <span class="tl-model">haiku 4.5</span>
+      <span class="tl-total">35.89s total</span>
+    </div>
+    <div class="timeline">
+      <div class="tl-row">
+        <span class="tl-name">researcher</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-researcher" style="width:17.2%">6.2s</div></div>
+        <span class="tl-tokens">484</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">writer 1</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-writer-1" style="width:17.0%">6.1s</div></div>
+        <span class="tl-tokens">1.1K</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">reviewer 1</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-reviewer" style="width:6.7%">2.4s</div></div>
+        <span class="tl-tokens">863</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">writer 2</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-writer-2" style="width:23.9%">8.6s</div></div>
+        <span class="tl-tokens">1.5K</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">reviewer 2</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-reviewer-2" style="width:7.3%">2.6s</div></div>
+        <span class="tl-tokens">1.2K</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">writer 3</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-writer-3" style="width:20.1%">7.2s</div></div>
+        <span class="tl-tokens">1.4K</span>
+      </div>
+      <div class="tl-row">
+        <span class="tl-name">reviewer 3</span>
+        <div class="tl-bar-wrap"><div class="tl-bar bar-reviewer-3" style="width:7.1%">2.6s</div></div>
+        <span class="tl-tokens">985</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Key findings</p>
+  <div class="insight-grid">
+    <div class="insight-card">
+      <div class="insight-num">2.7<span>×</span></div>
+      <div class="insight-desc">faster end-to-end with haiku</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-num">4.1<span>×</span></div>
+      <div class="insight-desc">cheaper per run with haiku</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-num">3<span>/3</span></div>
+      <div class="insight-desc">revisions needed by both models</div>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <p>Both models required the same number of revision loops (3), meaning haiku matched sonnet's quality trajectory at 4× lower cost and 2.7× lower latency on this topic.</p>
+    <p>For high-volume content pipelines where the reviewer loop self-corrects quality, haiku presents a compelling cost-performance tradeoff — with sonnet reserved for tasks where first-draft quality is critical.</p>
+  </div>
+
+  <p class="section-label">Stack</p>
+  <div class="stack-line">
+    <span class="tag">python</span>
+    <span class="tag">langgraph</span>
+    <span class="tag">langsmith</span>
+    <span class="tag">langchain-anthropic</span>
+    <span class="tag">claude haiku 4.5</span>
+    <span class="tag">claude sonnet 4.6</span>
+    <span class="tag">@traceable</span>
+    <span class="tag">multi-agent</span>
+  </div>
+
+  <div class="footer">
+    <span>multi-agent workflow tracer</span>
+    <span>april 2026</span>
+  </div>
+</div>

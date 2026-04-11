@@ -152,6 +152,21 @@ const Projects: React.FC = () => {
                           </div>
                         )}
 
+                        {project.comparisonUrl && (
+                          <div>
+                            <p className="text-slate-400 text-xs mb-2 uppercase tracking-wide">
+                              Live comparison report
+                            </p>
+                            <iframe
+                              src={project.comparisonUrl}
+                              width="100%"
+                              height="580px"
+                              className="border border-slate-700 rounded-lg"
+                              title="LangSmith Model Comparison"
+                            />
+                          </div>
+                        )}
+
                       </div>
                     )}
                   </div>
