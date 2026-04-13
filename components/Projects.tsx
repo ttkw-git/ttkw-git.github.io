@@ -163,6 +163,7 @@ const Projects: React.FC = () => {
                               height="760px"
                               className="border border-slate-700 rounded-xl bg-[#f5f2eb] overflow-hidden"
                               title="LangSmith Model Comparison"
+                              sandbox="allow-scripts allow-same-origin"
                             />
                           </div>
                         )}

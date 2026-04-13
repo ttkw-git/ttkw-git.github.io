@@ -154,6 +154,22 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="bg-slate-800/30 p-4 rounded-xl border border-slate-700/50">
+              <h4 className="font-semibold text-white text-sm mb-1">Google Data Analytics</h4>
+              <div className="flex items-center gap-2 text-xs">
+                <Calendar className="w-3 h-3 text-slate-400" />
+                <span className="text-slate-400">Oct 2023</span>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/30 p-4 rounded-xl border border-slate-700/50">
+              <h4 className="font-semibold text-white text-sm mb-1">Machine Learning with Python</h4>
+              <div className="flex items-center gap-2 text-xs">
+                <Calendar className="w-3 h-3 text-slate-400" />
+                <span className="text-slate-400">Apr 2023</span>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/30 p-4 rounded-xl border border-slate-700/50">
               <h4 className="font-semibold text-white text-sm mb-1">CCNA</h4>
               <div className="flex items-center gap-2 text-xs">
                 <Calendar className="w-3 h-3 text-slate-400" />

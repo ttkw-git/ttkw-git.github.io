@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
                   <Icon className="w-6 h-6 text-slate-300 group-hover:text-primary-400" />
                 </div>
                 <div className="text-left">
-                  <span className="block text-xs text-slate-500 uppercase tracking-wider font-medium">Follow on</span>
+                  <span className="block text-xs text-slate-500 uppercase tracking-wider font-medium">View on</span>
                   <span className="block text-lg font-semibold text-white">{link.name}</span>
                 </div>
               </a>

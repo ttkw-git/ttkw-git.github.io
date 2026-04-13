@@ -4,6 +4,7 @@ import { Project, SocialLink, NavItem } from './types';
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'Research', href: '#research' },
   { label: 'Contact', href: '#contact' },
@@ -71,21 +72,33 @@ export const PROJECTS: Project[] = [
     tags: ['TensorFlow', 'Transfer Learning', 'Computer Vision', 'Production ML'],
   },
   {
-  id: 5,
-  title: 'Multi-Agent LLM Pipeline with LangSmith Observability',
-  description: 'Production-style multi-agent content pipeline built with LangGraph, featuring a Researcher → Writer → Reviewer workflow with automated revision loops. Integrated full LangSmith tracing to compare Claude Sonnet 4.6 vs Haiku 4.5 on identical tasks, measuring latency, token cost, and revision behavior end-to-end.',
-  metrics: '4× Cost Reduction with Haiku • 2.7× Faster Latency • 3-Revision Loop • Full LangSmith Trace Observability',
-  technicalDetails: 'LangGraph state machine with typed WorkflowState passed across three @traceable agent nodes. Reviewer agent produces structured JSON scoring (1–10) to drive conditional edges — loops writer back on score <8, caps at 3 iterations to prevent infinite cycles. LangSmith captures per-node latency, token usage, and prompt/response at every span. Model comparison: Sonnet 4.6 (97.58s, 9,895 tokens, $0.0801) vs Haiku 4.5 (35.89s, 7,441 tokens, $0.0196) on identical topic — both required 3 revision loops, demonstrating haiku matches sonnet quality trajectory at 4× lower cost.',
-  limitations: 'Reviewer scoring is LLM-based and non-deterministic — same draft may receive different scores across runs. Article quality evaluation is subjective; no ground-truth dataset used for this comparison. Pipeline optimized for text content tasks; tool-use and RAG extensions not yet implemented.',
-  businessValue: 'Demonstrates production AI engineering thinking: observable pipelines, cost-quality tradeoffs, and agent design beyond single LLM calls. Directly applicable to content automation, document drafting, and any multi-step LLM workflow requiring quality gates and revision control.',
-  imageUrl: 'images/projects/multi_agent_tracer.jpg',
-  projectUrl: 'https://github.com/ttkw-git/multi-agent-tracer',
-  tags: ['LangGraph', 'LangSmith', 'Multi-Agent', 'LLM Observability', 'Anthropic', 'Python'],
-  comparisonUrl: '/comparison/langsmith_model_comparison_portfolio.html',
-},
+    id: 5,
+    title: 'Multi-Agent LLM Pipeline with LangSmith Observability',
+    description: 'Production-style multi-agent content pipeline built with LangGraph, featuring a Researcher → Writer → Reviewer workflow with automated revision loops. Integrated full LangSmith tracing to compare Claude Sonnet 4.6 vs Haiku 4.5 on identical tasks, measuring latency, token cost, and revision behavior end-to-end.',
+    metrics: '4× Cost Reduction with Haiku • 2.7× Faster Latency • 3-Revision Loop • Full LangSmith Trace Observability',
+    technicalDetails: 'LangGraph state machine with typed WorkflowState passed across three @traceable agent nodes. Reviewer agent produces structured JSON scoring (1–10) to drive conditional edges — loops writer back on score <8, caps at 3 iterations to prevent infinite cycles. LangSmith captures per-node latency, token usage, and prompt/response at every span. Model comparison: Sonnet 4.6 (97.58s, 9,895 tokens, $0.0801) vs Haiku 4.5 (35.89s, 7,441 tokens, $0.0196) on identical topic — both required 3 revision loops, demonstrating haiku matches sonnet quality trajectory at 4× lower cost.',
+    limitations: 'Reviewer scoring is LLM-based and non-deterministic — same draft may receive different scores across runs. Article quality evaluation is subjective; no ground-truth dataset used for this comparison. Pipeline optimized for text content tasks; tool-use and RAG extensions not yet implemented.',
+    businessValue: 'Demonstrates production AI engineering thinking: observable pipelines, cost-quality tradeoffs, and agent design beyond single LLM calls. Directly applicable to content automation, document drafting, and any multi-step LLM workflow requiring quality gates and revision control.',
+    imageUrl: 'images/projects/multi_agent_tracer.jpg',
+    projectUrl: 'https://github.com/ttkw-git/multi-agent-tracer',
+    tags: ['LangGraph', 'LangSmith', 'Multi-Agent', 'LLM Observability', 'Anthropic', 'Python'],
+    comparisonUrl: '/comparison/langsmith_model_comparison_portfolio.html',
+  },
+  {
+    id: 6,
+    title: 'ROS NLP Agent: Natural Language Robot Control',
+    description: 'LangGraph ReAct agent that translates plain English commands into ROS 2 motion — type "move forward for 3 seconds" and a TurtleBot3 moves in RViz2. Claude resolves intent to structured tool calls (move_robot / stop_robot), which publish Twist messages, joint states, and odom TF in real-time.',
+    metrics: 'Natural Language → ROS 2 Twist • Real-Time RViz2 Visualization • LangGraph ReAct Loop • CycloneDDS Transport',
+    technicalDetails: 'LangGraph ReAct agent selects from two LangChain tools: move_robot(linear_x, angular_z, duration) and stop_robot(). Each tool call drives a ROS 2 publisher node broadcasting /cmd_vel Twist messages, /joint_states for wheel animation, and an odom TF frame — all consumed live by RViz2. CycloneDDS configured via XML URI for reliable local transport. System prompt constrains Claude to spatial/motion intent only.',
+    limitations: 'Tested in simulation only (RViz2, no physical hardware). Single-agent loop with no memory between commands. Command set scoped to linear/angular velocity; no path planning or obstacle avoidance.',
+    businessValue: 'Demonstrates end-to-end LLM-to-hardware interface design: intent parsing, structured tool dispatch, and real-time robot state publication. Applicable to voice/text-controlled robotics, HRI (human-robot interaction) systems, and LLM-driven automation pipelines.',
+    imageUrl: 'images/projects/ros_nlp_agent.svg',
+    projectUrl: 'https://github.com/ttkw-git/ros-nlp-agent',
+    tags: ['ROS 2', 'LangGraph', 'Anthropic', 'NLP', 'Robotics', 'Python', 'LangChain'],
+  },
 ];
 
 // ACCURATELY POSITIONED ABOUT TEXT
 export const ABOUT_TEXT_1 = "Currently pursuing MS Computer Science at Georgia Tech while working as AI Trainer at Outlier. My technical focus spans autonomous robotics systems, computer vision for agricultural applications, and data systems optimization. Active research collaborator with conference presentation at NAPPN 2024.";
 
-export const ABOUT_TEXT_2 = "Experience includes 8+ years in banking data systems at Hang Seng Bank, agricultural robotics research collaboration at University of Winnipeg TerraByte Lab, and hands-on autonomous systems development. Combining academic research contributions with practical system implementation and enterprise data operations experience.";
+

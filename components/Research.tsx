@@ -83,7 +83,7 @@ const Research: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span className="text-slate-300">Autonomous rover testing with 100% operational uptime</span>
+                    <span className="text-slate-300">Autonomous rover testing with high operational reliability throughout research phases</span>
                   </div>
                 </div>
               </div>

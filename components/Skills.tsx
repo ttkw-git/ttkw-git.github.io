@@ -71,7 +71,7 @@ const ACHIEVEMENTS = [
     description: 'Via optimized data pipelines'
   },
   {
-    icon: Brain,
+    icon: TrendingUp,
     value: '90%+',
     label: 'Cost Reduction',
     description: 'In manual monitoring processes'

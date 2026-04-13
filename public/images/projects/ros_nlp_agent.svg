@@ -1,0 +1,150 @@
+<svg width="100%" viewBox="0 0 680 410" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="680" height="410" fill="rgb(38, 38, 36)"/>
+
+  <!-- Title -->
+  <text x="340" y="32" text-anchor="middle" fill="rgb(250, 249, 245)" style="font-size:16px;font-weight:600;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">ROS NLP Agent: Natural Language → Robot Motion</text>
+
+  <!-- ── LEFT: User Input Panel ── -->
+  <g transform="translate(18, 52)">
+    <rect x="0" y="0" width="178" height="310" rx="8" fill="rgb(48, 48, 46)" stroke="rgba(222,220,209,0.3)" stroke-width="1"/>
+    <text x="10" y="20" fill="rgb(250, 249, 245)" style="font-size:13px;font-weight:500;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">User Input</text>
+
+    <!-- Speech bubble 1 -->
+    <rect x="10" y="32" width="158" height="44" rx="8" fill="rgb(37, 62, 95)" stroke="rgb(70, 130, 213)" stroke-width="1"/>
+    <polygon points="22,76 32,76 22,90" fill="rgb(37, 62, 95)"/>
+    <text x="18" y="50" fill="rgb(200, 220, 255)" style="font-size:11px;font-family:monospace;">"move forward</text>
+    <text x="18" y="65" fill="rgb(200, 220, 255)" style="font-size:11px;font-family:monospace;"> for 3 seconds"</text>
+
+    <!-- Speech bubble 2 -->
+    <rect x="10" y="100" width="158" height="32" rx="8" fill="rgb(37, 62, 95)" stroke="rgb(70, 130, 213)" stroke-width="1"/>
+    <polygon points="22,132 32,132 22,146" fill="rgb(37, 62, 95)"/>
+    <text x="18" y="121" fill="rgb(200, 220, 255)" style="font-size:11px;font-family:monospace;">"turn left 90 degrees"</text>
+
+    <!-- Speech bubble 3 -->
+    <rect x="10" y="156" width="158" height="32" rx="8" fill="rgb(37, 62, 95)" stroke="rgb(70, 130, 213)" stroke-width="1"/>
+    <polygon points="22,188 32,188 22,202" fill="rgb(37, 62, 95)"/>
+    <text x="18" y="177" fill="rgb(200, 220, 255)" style="font-size:11px;font-family:monospace;">"spin in a circle"</text>
+
+    <!-- NLP label -->
+    <rect x="10" y="215" width="158" height="80" rx="6" fill="rgb(30, 30, 28)" stroke="rgba(128,170,221,0.3)" stroke-width="1"/>
+    <text x="89" y="235" text-anchor="middle" fill="rgb(128, 170, 221)" style="font-size:11px;font-weight:500;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">Stack</text>
+    <text x="18" y="252" fill="rgb(194, 192, 182)" style="font-size:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">• LangChain + LangGraph</text>
+    <text x="18" y="267" fill="rgb(194, 192, 182)" style="font-size:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">• Claude (Anthropic)</text>
+    <text x="18" y="282" fill="rgb(194, 192, 182)" style="font-size:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">• ROS 2 Humble</text>
+  </g>
+
+  <!-- ── CENTER: Pipeline ── -->
+  <g transform="translate(218, 52)">
+    <!-- Claude box -->
+    <rect x="0" y="0" width="150" height="52" rx="8" fill="rgb(55, 40, 60)" stroke="rgb(160, 100, 220)" stroke-width="1.5"/>
+    <text x="75" y="20" text-anchor="middle" fill="rgb(200, 160, 255)" style="font-size:12px;font-weight:600;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">Claude</text>
+    <text x="75" y="35" text-anchor="middle" fill="rgb(180, 140, 230)" style="font-size:10px;font-family:monospace;">ReAct Agent</text>
+    <text x="75" y="48" text-anchor="middle" fill="rgb(160, 120, 210)" style="font-size:9px;font-family:monospace;">intent → tool selection</text>
+
+    <!-- Arrow down -->
+    <line x1="75" y1="52" x2="75" y2="80" stroke="rgb(160, 100, 220)" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <polygon points="68,80 82,80 75,92" fill="rgb(160, 100, 220)"/>
+
+    <!-- LangGraph box -->
+    <rect x="0" y="92" width="150" height="52" rx="8" fill="rgb(40, 55, 40)" stroke="rgb(100, 180, 100)" stroke-width="1.5"/>
+    <text x="75" y="112" text-anchor="middle" fill="rgb(150, 220, 150)" style="font-size:12px;font-weight:600;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">LangGraph</text>
+    <text x="75" y="127" text-anchor="middle" fill="rgb(130, 200, 130)" style="font-size:10px;font-family:monospace;">State Machine</text>
+    <text x="75" y="140" text-anchor="middle" fill="rgb(110, 180, 110)" style="font-size:9px;font-family:monospace;">tool dispatch loop</text>
+
+    <!-- Arrow down -->
+    <line x1="75" y1="144" x2="75" y2="172" stroke="rgb(100, 180, 100)" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <polygon points="68,172 82,172 75,184" fill="rgb(100, 180, 100)"/>
+
+    <!-- Tools box -->
+    <rect x="0" y="184" width="150" height="68" rx="8" fill="rgb(48, 48, 46)" stroke="rgb(200, 160, 60)" stroke-width="1.5"/>
+    <text x="75" y="202" text-anchor="middle" fill="rgb(240, 200, 80)" style="font-size:11px;font-weight:600;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">Tool Calls</text>
+    <text x="12" y="220" fill="rgb(200, 180, 100)" style="font-size:10px;font-family:monospace;">move_robot(</text>
+    <text x="20" y="233" fill="rgb(180, 160, 80)" style="font-size:9px;font-family:monospace;">linear_x=0.3,</text>
+    <text x="20" y="245" fill="rgb(180, 160, 80)" style="font-size:9px;font-family:monospace;">duration=3.0</text>
+    <text x="12" y="248" fill="rgb(200, 180, 100)" style="font-size:10px;font-family:monospace;">)</text>
+
+    <!-- Arrow down -->
+    <line x1="75" y1="252" x2="75" y2="280" stroke="rgb(200, 160, 60)" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <polygon points="68,280 82,280 75,292" fill="rgb(200, 160, 60)"/>
+
+    <!-- ROS publisher box -->
+    <rect x="0" y="292" width="150" height="44" rx="8" fill="rgb(30, 50, 40)" stroke="rgb(60, 180, 120)" stroke-width="1.5"/>
+    <text x="75" y="310" text-anchor="middle" fill="rgb(80, 220, 150)" style="font-size:11px;font-weight:600;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">ROS 2 Publisher</text>
+    <text x="75" y="325" text-anchor="middle" fill="rgb(60, 200, 130)" style="font-size:9px;font-family:monospace;">/cmd_vel  /joint_states  odom TF</text>
+  </g>
+
+  <!-- Arrow from pipeline to RViz panel -->
+  <line x1="390" y1="255" x2="435" y2="255" stroke="rgb(60, 180, 120)" stroke-width="2"/>
+  <polygon points="430,249 442,255 430,261" fill="rgb(60, 180, 120)"/>
+
+  <!-- ── RIGHT: RViz2 Visualization ── -->
+  <g transform="translate(445, 52)">
+    <rect x="0" y="0" width="218" height="310" rx="8" fill="rgb(20, 25, 22)" stroke="rgb(60, 180, 120)" stroke-width="1.5"/>
+    <text x="109" y="20" text-anchor="middle" fill="rgb(80, 220, 150)" style="font-size:12px;font-weight:500;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">RViz2 Visualization</text>
+
+    <!-- Grid lines horizontal -->
+    <line x1="10" y1="35" x2="208" y2="35" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="10" y1="65" x2="208" y2="65" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="10" y1="95" x2="208" y2="95" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="10" y1="125" x2="208" y2="125" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="10" y1="155" x2="208" y2="155" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="10" y1="185" x2="208" y2="185" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="10" y1="215" x2="208" y2="215" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="10" y1="245" x2="208" y2="245" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <!-- Grid lines vertical -->
+    <line x1="10" y1="35" x2="10" y2="275" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="40" y1="35" x2="40" y2="275" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="70" y1="35" x2="70" y2="275" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="100" y1="35" x2="100" y2="275" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="130" y1="35" x2="130" y2="275" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="160" y1="35" x2="160" y2="275" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="190" y1="35" x2="190" y2="275" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+    <line x1="208" y1="35" x2="208" y2="275" stroke="rgba(100,150,100,0.2)" stroke-width="1"/>
+
+    <!-- Robot path trail (ghost positions) -->
+    <circle cx="55" cy="155" r="10" fill="rgba(80,220,150,0.1)" stroke="rgba(80,220,150,0.2)" stroke-width="1"/>
+    <circle cx="70" cy="155" r="10" fill="rgba(80,220,150,0.15)" stroke="rgba(80,220,150,0.25)" stroke-width="1"/>
+    <circle cx="85" cy="155" r="10" fill="rgba(80,220,150,0.2)" stroke="rgba(80,220,150,0.3)" stroke-width="1"/>
+
+    <!-- Motion trail line -->
+    <line x1="55" y1="155" x2="115" y2="155" stroke="rgba(80,220,150,0.4)" stroke-width="2" stroke-dasharray="4,3"/>
+
+    <!-- Robot (TurtleBot) - current position -->
+    <circle cx="115" cy="155" r="14" fill="rgb(30, 80, 55)" stroke="rgb(80, 220, 150)" stroke-width="2"/>
+    <!-- Robot body detail -->
+    <circle cx="115" cy="155" r="7" fill="rgb(60, 180, 120)" opacity="0.8"/>
+    <!-- Wheels -->
+    <rect x="101" y="163" width="8" height="4" rx="2" fill="rgb(80, 220, 150)"/>
+    <rect x="119" y="163" width="8" height="4" rx="2" fill="rgb(80, 220, 150)"/>
+    <!-- Direction indicator -->
+    <polygon points="130,155 140,150 140,160" fill="rgb(80, 220, 150)"/>
+
+    <!-- Motion arrows ahead -->
+    <line x1="145" y1="155" x2="175" y2="155" stroke="rgb(80, 220, 150)" stroke-width="2"/>
+    <polygon points="170,150 180,155 170,160" fill="rgb(80, 220, 150)"/>
+
+    <!-- odom TF label -->
+    <rect x="12" y="260" width="82" height="20" rx="4" fill="rgba(37,62,95,0.8)" stroke="rgb(70, 130, 213)" stroke-width="1"/>
+    <text x="53" y="274" text-anchor="middle" fill="rgb(128, 170, 221)" style="font-size:9px;font-family:monospace;">odom TF</text>
+
+    <!-- cmd_vel label -->
+    <rect x="100" y="260" width="108" height="20" rx="4" fill="rgba(30,50,40,0.8)" stroke="rgb(60,180,120)" stroke-width="1"/>
+    <text x="154" y="274" text-anchor="middle" fill="rgb(80, 220, 150)" style="font-size:9px;font-family:monospace;">/cmd_vel Twist</text>
+
+    <!-- RViz2 watermark -->
+    <text x="109" y="295" text-anchor="middle" fill="rgba(100,150,100,0.5)" style="font-size:10px;font-family:monospace;">RViz2 · CycloneDDS</text>
+  </g>
+
+  <!-- Bottom legend -->
+  <g transform="translate(18, 378)">
+    <circle cx="8" cy="8" r="5" fill="rgb(55,40,60)" stroke="rgb(160,100,220)" stroke-width="1.5"/>
+    <text x="18" y="12" fill="rgb(194, 192, 182)" style="font-size:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">Claude + LangGraph</text>
+    <circle cx="148" cy="8" r="5" fill="rgb(40,55,40)" stroke="rgb(100,180,100)" stroke-width="1.5"/>
+    <text x="158" y="12" fill="rgb(194, 192, 182)" style="font-size:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">Tool Dispatch</text>
+    <circle cx="278" cy="8" r="5" fill="rgb(30,80,55)" stroke="rgb(80,220,150)" stroke-width="1.5"/>
+    <text x="288" y="12" fill="rgb(194, 192, 182)" style="font-size:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">ROS 2 Motion</text>
+    <circle cx="408" cy="8" r="5" fill="rgb(37,62,95)" stroke="rgb(70,130,213)" stroke-width="1.5"/>
+    <text x="418" y="12" fill="rgb(194, 192, 182)" style="font-size:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">NLP Input</text>
+  </g>
+</svg>
