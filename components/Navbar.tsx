@@ -25,10 +25,10 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+          <a href="#home" className="flex-shrink-0 flex items-center gap-2">
             <Code2 className="h-8 w-8 text-primary-500" />
             <span className="text-xl font-bold text-white tracking-tight">Tony TK Wong</span>
-          </div>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">

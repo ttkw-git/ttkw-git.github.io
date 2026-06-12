@@ -10,7 +10,7 @@ export interface Project {
   businessValue?: string;
   comparisonUrl?: string;
   imageUrl: string;
-  projectUrl: string;
+  projectUrl?: string;
   tags: string[];
   featured?: boolean;
 }

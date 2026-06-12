@@ -46,7 +46,6 @@ export const PROJECTS: Project[] = [
     technicalDetails: 'Contributed to Embedded Automated Generator of Labeled Images (EAGL-I) system research at University of Winnipeg TerraByte Research Lab. Solved critical lighting adaptation challenges for agricultural computer vision applications. Implemented YOLO deep learning model achieving 90% accuracy in plant segmentation. Developed automated data pipelines resulting in 50% improvement in data collection reliability.',
     businessValue: 'Advances automated crop monitoring and precision agriculture capabilities. Research findings presented at North American Plant Phenotyping Network 2024 conference, contributing to agricultural AI development and automated farming system advancement.',
     imageUrl: 'images/projects/eagl_i_agricultural_vision.svg',
-    projectUrl: 'https://github.com/ttkw-git/eagl-i-research',
     tags: ['Computer Vision', 'YOLO', 'Agricultural AI', 'Conference Presentation', 'Research Collaboration'],
   },
   {
@@ -57,7 +56,6 @@ export const PROJECTS: Project[] = [
     technicalDetails: 'Developed SQL-based reporting systems for branch-level sales data within assigned portfolio operations. Built automated data processing workflows reducing manual handling overhead. Implemented data validation and quality controls improving reliability. Contributed to broader Knowledge Management System implementation using Agile methodology.',
     businessValue: 'Delivered measurable operational improvements in branch banking operations. Reduced manual data processing overhead while maintaining data accuracy and regulatory compliance. Enabled more efficient portfolio management and faster decision-making for branch operations.',
     imageUrl: 'images/projects/banking_data_systems.svg',
-    projectUrl: 'https://github.com/ttkw-git/banking-data-portfolio',
     tags: ['SQL', 'Data Processing', 'Business Intelligence', 'Branch Operations', 'Process Automation'],
   },
   {
@@ -99,6 +97,6 @@ export const PROJECTS: Project[] = [
 ];
 
 // ACCURATELY POSITIONED ABOUT TEXT
-export const ABOUT_TEXT_1 = "Currently pursuing MS Computer Science at Georgia Tech while working as AI Trainer at Outlier. My technical focus spans autonomous robotics systems, computer vision for agricultural applications, and data systems optimization. Active research collaborator with conference presentation at NAPPN 2024.";
+export const ABOUT_TEXT_1 = "AI Trainer at Outlier with a technical focus spanning autonomous robotics systems, computer vision for agricultural applications, and data systems optimization. Active research collaborator with conference presentation at NAPPN 2024.";
 
 

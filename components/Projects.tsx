@@ -42,17 +42,19 @@ const Projects: React.FC = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
-                <div className="absolute top-4 right-4 z-20">
-                  <a
-                    href={project.projectUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-primary-500/80 transition-colors block"
-                    aria-label={`View ${project.title}`}
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </div>
+                {project.projectUrl && (
+                  <div className="absolute top-4 right-4 z-20">
+                    <a
+                      href={project.projectUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-primary-500/80 transition-colors block"
+                      aria-label={`View ${project.title}`}
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  </div>
+                )}
 
                 {project.featured && (
                   <div className="absolute top-4 left-4 z-20">
@@ -173,17 +175,18 @@ const Projects: React.FC = () => {
                   </div>
                 )}
 
-                {/* Project Link - Always Visible */}
-                <div className="mt-6 pt-4 border-t border-slate-700/50">
-                  <a
-                    href={project.projectUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 text-sm font-medium transition-colors"
-                  >
-                    View Implementation & Code →
-                  </a>
-                </div>
+                {project.projectUrl && (
+                  <div className="mt-6 pt-4 border-t border-slate-700/50">
+                    <a
+                      href={project.projectUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 text-sm font-medium transition-colors"
+                    >
+                      View Implementation & Code →
+                    </a>
+                  </div>
+                )}
               </div>
             </article>
           ))}
