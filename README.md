@@ -4,7 +4,7 @@ Personal portfolio site. Live at [https://ttkw-git.github.io/](https://ttkw-git.
 
 ## About
 
-MS Computer Science student at Georgia Tech (2025–2027), currently working as an AI Trainer at Outlier and as a Research Technician at the University of Winnipeg. Previously a Business Technology Analyst at Hang Seng Bank. Looking for full-time roles in AI/ML and data engineering starting Summer 2025.
+AI Trainer at Outlier and Research Technician at the University of Winnipeg. Previously a Business Technology Analyst at Hang Seng Bank. Looking for full-time roles in AI/ML and data engineering.
 
 ## Projects
 

@@ -25,10 +25,6 @@ const Hero: React.FC = () => {
                     <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
                     Open to New Opportunities
                   </div>
-                  <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium">
-                    <GraduationCap className="w-4 h-4 mr-2" />
-                    Georgia Tech MS Student (Expected 2027)
-                  </div>
                 </div>
 
                 {/* Main Headline */}
@@ -69,8 +65,8 @@ const Hero: React.FC = () => {
                     <div className="text-sm text-slate-400">Data Reliability ↑</div>
                   </div>
                   <div className="text-center lg:text-left">
-                    <div className="text-2xl font-bold text-white">MS</div>
-                    <div className="text-sm text-slate-400">Computer Science</div>
+                    <div className="text-2xl font-bold text-white">8+</div>
+                    <div className="text-sm text-slate-400">Years Industry</div>
                   </div>
                 </div>
 
@@ -81,13 +77,6 @@ const Hero: React.FC = () => {
                     Current Focus: Advanced AI & Practical Applications
                   </h3>
                   <div className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <span className="text-white font-medium">Advanced AI Studies</span>
-                        <span className="text-slate-400 text-sm block">Georgia Tech MS • Reinforcement Learning, Robotics AI Techniques</span>
-                      </div>
-                    </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
                       <div>
@@ -196,8 +185,8 @@ const Hero: React.FC = () => {
                       <span className="text-primary-400 font-bold text-sm">2024</span>
                     </div>
                     <div>
-                      <h4 className="text-white font-medium">AI Trainer & Advanced Studies</h4>
-                      <p className="text-slate-400 text-sm">Outlier • Georgia Tech MS Program</p>
+                      <h4 className="text-white font-medium">AI Trainer</h4>
+                      <p className="text-slate-400 text-sm">Outlier • Professional AI evaluation and training</p>
                     </div>
                   </div>
                   
@@ -233,14 +222,6 @@ const Hero: React.FC = () => {
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <GraduationCap className="text-primary-400 mt-1 flex-shrink-0" size={18} />
-                    <div>
-                      <span className="text-white font-medium block">MS Computer Science (2025 - Expected 2027)</span>
-                      <span className="text-slate-300 text-sm">Georgia Institute of Technology • Advanced AI & Robotics Focus</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-4 h-4 bg-emerald-400 rounded-full mt-1 flex-shrink-0"></div>
                     <div>
                       <span className="text-white font-medium block">Academic Excellence Award</span>
                       <span className="text-slate-300 text-sm">International Student Scholarship • Red River College</span>

@@ -26,26 +26,13 @@ const Experience: React.FC = () => {
               <div className="relative pl-8 border-l-2 border-primary-600/30">
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-primary-600 rounded-full"></div>
                 <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                  <h4 className="text-lg font-semibold text-white mb-2">Master of Science in Computer Science</h4>
-                  <p className="text-primary-400 font-medium mb-2">Georgia Institute of Technology</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Diploma, Data Science & Machine Learning</h4>
+                  <p className="text-primary-400 font-medium mb-2">Red River College Polytechnic</p>
                   <div className="flex items-center gap-2 text-slate-400 text-sm mb-3">
                     <MapPin className="w-4 h-4" />
-                    <span>Atlanta, GA • January 2025 - Present</span>
+                    <span>Winnipeg, MB • August 2021 - April 2023</span>
                   </div>
                   <div className="text-slate-300 text-sm">
-                    <p className="font-medium text-primary-300 mb-1">Specialization:</p>
-                    <p>Autonomous Robotics Systems, AI/ML Applications, Sensor Fusion</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative pl-8 border-l-2 border-slate-600/30">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-slate-600 rounded-full"></div>
-                <div className="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
-                  <h4 className="text-lg font-semibold text-white mb-2">Diploma, Data Science & Machine Learning</h4>
-                  <p className="text-slate-400 font-medium mb-2">Red River College Polytechnic</p>
-                  <div className="text-slate-400 text-sm mb-2">August 2021 - April 2023</div>
-                  <div className="text-slate-400 text-sm">
                     Comprehensive training in ML model development, data analysis, statistical methods, and production deployment techniques.
                   </div>
                 </div>
