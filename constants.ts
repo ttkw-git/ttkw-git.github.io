@@ -50,13 +50,13 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 3,
-    title: 'Branch Data Systems: Banking Operations Optimization',
-    description: 'Data processing and business intelligence improvements for assigned branch portfolio at Hang Seng Bank. Built SQL-based reporting systems reducing errors by 25%, automated data processing cutting manual work by 40%, and improved data reliability by 50% through systematic automation.',
-    metrics: '25% Error Reduction • 40% Process Automation • 50% Reliability Improvement • Portfolio Management',
-    technicalDetails: 'Developed SQL-based reporting systems for branch-level sales data within assigned portfolio operations. Built automated data processing workflows reducing manual handling overhead. Implemented data validation and quality controls improving reliability. Contributed to broader Knowledge Management System implementation using Agile methodology.',
+    title: 'Branch Sales Reporting: Banking Process Improvement',
+    description: 'Sales data reporting and process improvement for an assigned branch portfolio at Hang Seng Bank. Built Excel and MS Access reporting that reduced reporting errors by about 25%, and automated manual reporting steps to cut data handling by about 40%.',
+    metrics: '25% Error Reduction • 40% Less Manual Handling • Tableau Dashboards',
+    technicalDetails: 'Collected branch sales data in Excel (pivot tables, macros, formulas), imported it into MS Access to generate reports, and built Tableau dashboards for sales and operational data. Automated previously manual reporting steps and maintained workflow documentation. Took part in end-user UAT for a Knowledge Management System rollout run under Agile (Scrum).',
     businessValue: 'Delivered measurable operational improvements in branch banking operations. Reduced manual data processing overhead while maintaining data accuracy and regulatory compliance. Enabled more efficient portfolio management and faster decision-making for branch operations.',
     imageUrl: 'images/projects/banking_data_systems.svg',
-    tags: ['SQL', 'Data Processing', 'Business Intelligence', 'Branch Operations', 'Process Automation'],
+    tags: ['Excel', 'MS Access', 'Tableau', 'Process Improvement'],
   },
   {
     id: 4,

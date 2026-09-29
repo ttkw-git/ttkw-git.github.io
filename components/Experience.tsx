@@ -68,12 +68,11 @@ const Experience: React.FC = () => {
                   <p className="text-green-400 font-medium mb-2">Hang Seng Bank Limited</p>
                   <div className="text-slate-400 text-sm mb-3">Jan 2013 - Aug 2021</div>
                   <div className="text-slate-300 text-sm space-y-2">
-                    <p>Branch-level data systems and business intelligence for assigned portfolio:</p>
+                    <p>Sales data reporting and process improvement for an assigned branch portfolio:</p>
                     <div className="pl-4 space-y-1">
-                      <p>• <span className="text-green-400">SQL-based reporting systems:</span> 25% reduction in reporting errors within managed portfolio</p>
-                      <p>• <span className="text-green-400">Automated data processing:</span> 40% reduction in manual handling for branch operations</p>
-                      <p>• <span className="text-green-400">Data reliability improvements:</span> 50% improvement through automation</p>
-                      <p>• <span className="text-green-400">System implementation:</span> Contributed to Knowledge Management System rollout</p>
+                      <p>• <span className="text-green-400">Excel &amp; MS Access reporting:</span> 25% reduction in reporting errors through process improvements</p>
+                      <p>• <span className="text-green-400">Automated reporting steps:</span> 40% reduction in manual data handling; Tableau dashboards for sales data</p>
+                      <p>• <span className="text-green-400">User acceptance testing:</span> End-user UAT and adoption support for a Knowledge Management System rollout</p>
                     </div>
                   </div>
                 </div>
@@ -168,7 +167,7 @@ const Experience: React.FC = () => {
             <div className="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
               <h4 className="font-semibold text-white mb-3">Data Systems & Analytics</h4>
               <p className="text-slate-400 text-sm leading-relaxed">
-                SQL-based data processing, automated reporting systems, business intelligence, and enterprise data operations.
+                Python data pipelines, Excel / Power Query and MS Access reporting, Tableau and Power BI dashboards, and sensor data validation.
               </p>
             </div>
 
