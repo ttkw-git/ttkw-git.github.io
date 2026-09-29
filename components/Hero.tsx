@@ -86,13 +86,6 @@ const Hero: React.FC = () => {
                         <span className="text-slate-400 text-sm block">University of Winnipeg • Autonomous systems with practical applications</span>
                       </div>
                     </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <span className="text-white font-medium">AI Code Quality Specialist</span>
-                        <span className="text-slate-400 text-sm block">Outlier • Professional AI evaluation and training</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -182,16 +175,6 @@ const Hero: React.FC = () => {
                   Recent Career Development
                 </h3>
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center">
-                      <span className="text-primary-400 font-bold text-sm">2024</span>
-                    </div>
-                    <div>
-                      <h4 className="text-white font-medium">AI Trainer</h4>
-                      <p className="text-slate-400 text-sm">Outlier • Professional AI evaluation and training</p>
-                    </div>
-                  </div>
-                  
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center">
                       <span className="text-cyan-400 font-bold text-sm">2023</span>

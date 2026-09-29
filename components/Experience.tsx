@@ -61,18 +61,6 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="space-y-8">
-              <div className="relative pl-8 border-l-2 border-primary-600/30">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-primary-600 rounded-full"></div>
-                <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                  <h4 className="text-lg font-semibold text-white mb-2">AI Trainer</h4>
-                  <p className="text-primary-400 font-medium mb-2">Outlier</p>
-                  <div className="text-slate-400 text-sm mb-3">2024 - Present</div>
-                  <div className="text-slate-300 text-sm">
-                    Training and fine-tuning AI models, developing training datasets, and optimizing model performance for production applications.
-                  </div>
-                </div>
-              </div>
-
               <div className="relative pl-8 border-l-2 border-green-500/30">
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-green-500 rounded-full"></div>
                 <div className="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
