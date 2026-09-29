@@ -33,8 +33,10 @@ const Hero: React.FC = () => {
                     Tony TK Wong
                   </span>
                   <br />
-                  AI Specialist &<br />
-                  Agricultural Technology Developer
+                  IoT &amp; Systems Technician
+                  <span className="block mt-3 text-2xl sm:text-3xl font-light text-slate-300">
+                    Networks, hardware, and applied ML
+                  </span>
                 </h1>
 
                 {/* Location & Current Focus */}
@@ -143,7 +145,7 @@ const Hero: React.FC = () => {
                 <div className="relative w-80 h-80 lg:w-96 lg:h-96">
                   <img
                     src="images/about/1.jpg"
-                    alt="Tony TK Wong - AI Specialist & Agricultural Technology Developer"
+                    alt="Tony TK Wong - IoT & Systems Technician"
                     className="w-full h-full object-cover rounded-2xl shadow-xl"
                   />
                   {/* Professional Achievement Badges */}
