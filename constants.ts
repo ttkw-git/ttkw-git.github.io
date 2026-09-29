@@ -97,6 +97,6 @@ export const PROJECTS: Project[] = [
 ];
 
 // ACCURATELY POSITIONED ABOUT TEXT
-export const ABOUT_TEXT_1 = "AI Trainer at Outlier with a technical focus spanning autonomous robotics systems, computer vision for agricultural applications, and data systems optimization. Active research collaborator with conference presentation at NAPPN 2024.";
+export const ABOUT_TEXT_1 = "CCNA and CompTIA A+ certified technician who likes finding out why things break and making sure they don't break again. At the University of Winnipeg's TerraByte lab, I keep hardware, IoT sensor networks, field robots, and data systems running, and use Python and applied ML to automate the rest.";
 
 

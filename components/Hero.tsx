@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="flex items-center space-x-2 text-slate-300">
                     <Briefcase className="w-4 h-4" />
-                    <span>AI Trainer • Agricultural Robotics Researcher</span>
+                    <span>Technician, University of Winnipeg • CCNA | CompTIA A+</span>
                   </div>
                 </div>
 
